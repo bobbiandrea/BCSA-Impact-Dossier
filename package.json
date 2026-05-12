@@ -1,0 +1,14 @@
+{
+  "name": "bcsa-site",
+  "version": "1.0.0",
+  "description": "Based Creators Southern Africa (BCSA) official site.",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx -y live-server . --port=3000 --no-browser",
+    "serve": "npx -y live-server . --port=3000 --no-browser",
+    "dev": "npm run start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
