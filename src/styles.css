@@ -429,7 +429,7 @@ header {
     grid-template-columns: 1fr; 
     height: auto; 
     overflow: visible; 
-    padding-top: 140px; 
+    padding-top: clamp(100px, 12vh, 140px); 
   }
   
   .panel { 
