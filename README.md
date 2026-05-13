@@ -49,7 +49,7 @@ bcsa-site/
 
 ## 🛠️ Maintenance & Updates
 
-- **Verified Metrics**: Keep numbers in `index.html` and `report.html` aligned (e.g., Chapter counts, Member totals).
+- **Verified Metrics**: Keep numbers in `index.html` and `report.html` aligned (e.g., Square counts, Member totals).
 - **Images**: New verified IRL photos should be added to `public/images/` and referenced in the masonry gallery.
 - **Brand Consistency**: All styling should adhere to the tokens defined in `:root` inside `src/styles.css`.
 
@@ -78,7 +78,7 @@ All content is in `index.html` — open it in Windsurf/VS Code and edit:
 
 - **Stats** → search for `kpi-num` to find the numbers
 - **Council members** → search for `q-panel` section
-- **Chapter table** → search for `table-wrap`
+- **Square table** → search for `table-wrap`
 - **New images** → drop into `public/images/` and add a new `.gallery-item` div
 
 ---
