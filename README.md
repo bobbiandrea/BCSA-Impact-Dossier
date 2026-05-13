@@ -1,48 +1,68 @@
-# BCSA Impact Report — Production Site
+# BCSA Impact Dossier — Production Site
 
 **Based Creators Southern Africa (@BCSA_Region)**
-Impact Report 2025 — Official southern region chapter site.
+Impact Report 2025—2026 — Official southern region chapter site.
 
 ---
 
-## Project Structure
+## 🏗️ Project Overview
+This is a high-fidelity impact dossier for BCSA, showcasing regional growth, builder metrics, and the strategic roadmap for Southern Africa's onchain ecosystem on Base.
+
+### Tech Stack
+- **Foundation**: Semantic HTML5 / Vanilla JavaScript (ES6+)
+- **Styling**: Modern CSS3 (Custom Properties, Grid, Flexbox)
+- **Visuals**: Three.js (Architectural WebGL visualizations)
+- **Typography**: Inter Tight, Inter, IBM Plex Mono (Google Fonts)
+
+---
+
+## 📂 Project Structure
 
 ```
 bcsa-site/
-├── index.html          ← Main page (edit content here)
+├── index.html          ← Main landing page & ecosystem dossier
+├── report.html         ← Formal impact report (Data-driven)
 ├── netlify.toml        ← Netlify deployment config
 ├── vercel.json         ← Vercel deployment config
 ├── public/
-│   ├── favicon.svg     ← BC favicon
-│   └── images/         ← All 42 photos (reference as /images/filename.jpg)
+│   ├── favicon.svg     ← BCSA brand favicon
+│   └── images/         ← Verified IRL activity photos & social proof
 └── src/
-    ├── styles.css      ← All styles (Base brand fonts + design system)
-    └── main.js         ← Scroll reveal, KPI counters, lightbox, tabs
+    ├── styles.css      ← Design system & brand-aligned styles
+    └── main.js         ← Interactive logic, Three.js scenes, & UI state
 ```
 
 ---
 
-## Deploy in 2 Minutes
+## 🚀 Deployment
 
-### Option A — Netlify (Recommended, free)
-1. Go to [netlify.com](https://netlify.com) → Sign up
-2. Drag and drop the **entire `bcsa-site` folder** onto the Netlify deploy area
-3. Done — live URL instantly
+### Quick Deploy (Netlify)
+1. Drag and drop the `bcsa-site` folder onto the [Netlify Drop](https://app.netlify.com/drop) area.
+2. Configure your custom domain (e.g., `bcsa.create.blue`).
 
-### Option B — Vercel
-1. Go to [vercel.com](https://vercel.com) → Sign up with GitHub
-2. Push this folder to a GitHub repo
-3. Import repo in Vercel → Deploy
-4. Done — live URL instantly
-
-### Option C — GitHub Pages (free)
-1. Push to a GitHub repo
-2. Go to repo Settings → Pages → Source: main branch, root folder
-3. Done — live at `yourusername.github.io/bcsa-site`
+### Professional Deploy (Vercel)
+1. Push this repository to GitHub.
+2. Import the project in the [Vercel Dashboard](https://vercel.com).
+3. The `vercel.json` file handles performance headers and redirects automatically.
 
 ---
 
-## Adding Your Custom Domain
+## 🛠️ Maintenance & Updates
+
+- **Verified Metrics**: Keep numbers in `index.html` and `report.html` aligned (e.g., Chapter counts, Member totals).
+- **Images**: New verified IRL photos should be added to `public/images/` and referenced in the masonry gallery.
+- **Brand Consistency**: All styling should adhere to the tokens defined in `:root` inside `src/styles.css`.
+
+---
+
+## ⚖️ Governance & Alignment
+This site is maintained by the BCSA Council. It is designed to be **Base-aligned** but operates as an independent regional initiative for Southern Africa.
+
+**Last Updated**: 13 May 2026, CAT
+**Contact**: @BCSA_Region on X / warpcast
+
+---
+Built with 💙 on Base.
 
 After deploying on Netlify or Vercel:
 1. Go to Domain Settings in the dashboard

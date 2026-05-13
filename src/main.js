@@ -21,6 +21,16 @@ document.addEventListener('DOMContentLoaded', () => {
   function createScene(containerId, colorHex, geometryType) {
     const container = document.getElementById(containerId);
     if (!container) return null;
+
+    // WebGL Support Check
+    try {
+      const canvas = document.createElement('canvas');
+      const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+      if (!gl) throw new Error('WebGL not supported');
+    } catch (e) {
+      container.innerHTML = '<div style="padding:2rem; font-size:0.7rem; font-family:var(--font-mono); color:var(--text-muted);">WEBGL_REQUIRED_FOR_VISUALIZATION</div>';
+      return null;
+    }
     
     const width = container.clientWidth;
     const height = container.clientHeight;
