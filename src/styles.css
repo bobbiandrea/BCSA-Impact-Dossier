@@ -46,11 +46,16 @@ html {
   scroll-behavior: smooth;
 }
 
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
 body {
   background-color: var(--bg-color);
   color: var(--text-main);
   font-family: var(--font-primary);
-  overflow-x: hidden;
   line-height: 1.5;
   font-size: 16px;
 }
@@ -415,6 +420,7 @@ section {
   position: relative;
   z-index: 5;
   background: var(--bg-color);
+  scroll-margin-top: 80px;
 }
 
 .section-hd {
@@ -1032,14 +1038,15 @@ footer {
 }
 
 .footer-link {
-  color: var(--text-main);
+  color: #FFFFFF;
   text-decoration: none;
   font-size: 0.85rem;
   transition: opacity 0.2s;
+  opacity: 0.8;
 }
 
 .footer-link:hover {
-  opacity: 0.6;
+  opacity: 1;
 }
 
 /* ── REVEAL ANIMATIONS ──────────────────────────────── */
@@ -1145,12 +1152,77 @@ footer {
     text-align: left;
   }
 
-  .map-container {
-    padding: 1.5rem;
+  .grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .grid > * {
+    grid-column: span 12 !important;
+    margin-left: 0 !important;
+    width: 100% !important;
   }
 
   .q-tabs {
     flex-wrap: wrap;
+  }
+
+  /* Table to Cards Transformation */
+  .table-wrap table, 
+  .table-wrap thead, 
+  .table-wrap tbody, 
+  .table-wrap th, 
+  .table-wrap td, 
+  .table-wrap tr { 
+    display: block; 
+  }
+
+  .table-wrap thead tr { 
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .table-wrap tr { 
+    border: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.02);
+  }
+
+  .table-wrap td { 
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,0.05); 
+    position: relative;
+    padding-left: 50% !important; 
+    text-align: right !important;
+    min-height: 3rem;
+  }
+
+  .table-wrap td:last-child {
+    border-bottom: none;
+  }
+
+  .table-wrap td:before { 
+    position: absolute;
+    top: 1.25rem;
+    left: 0;
+    width: 45%; 
+    padding-right: 10px; 
+    white-space: nowrap;
+    text-align: left;
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    color: var(--base-blue);
+    content: attr(data-label);
+  }
+
+  .roadmap-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
   }
 
   /* ── MOBILE HERO POLISH (768px) ── */
