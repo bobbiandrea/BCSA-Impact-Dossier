@@ -100,7 +100,7 @@
         </div>
         <footer class="panel-footer-cluster">
           <p class="panel-description">
-            Building a decentralized future where regional creators have direct access to global tools and funding.
+            Driving regional autonomy and local creator growth by connecting Southern African talent to global funding and onchain governance.
           </p>
           <div class="panel-interaction">
             <a href="https://discord.gg/buildonbase" target="_blank" class="link-small">Join the Discord &rarr;</a>
@@ -190,8 +190,8 @@
                 <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.7;">Groups of artists and technologists building creator infrastructure (Livingstone, SA Film DAO).</p>
               </div>
               <div class="legend-item">
-                <h4 style="color: var(--base-blue); font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase;">03 / Grant Recipients</h4>
-                <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.7;">Builders funded by Base to grow local initiatives (Song Chain, BCSA Regional Ops).</p>
+                <h4 style="color: var(--base-blue); font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase;">03 / Builder Grant Recipients</h4>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.7;">Active regional contributors successfully securing ecosystem support and grant nominations for local growth.</p>
               </div>
             </div>
             <p style="margin-top: 3rem; font-size: 0.8rem; font-family: var(--font-mono); color: var(--text-muted);">
@@ -214,13 +214,13 @@
           </div>
           <div style="grid-column: span 5;" class="reveal delay-1">
             <p class="big-copy" style="font-size: 1.5rem; line-height: 1.4; color: var(--text-main);">
-              BCSA began as a grassroots regional effort and later received ecosystem support through 
-              <span class="highlight">BasedCreators Global</span> and <span class="highlight">Agency DAO</span>.
+              BCSA operates as the Southern Africa Regional Square within the BasedCreators sub-DAO network under 
+              <span class="highlight">Agency DAO</span>.
             </p>
             <p style="margin-top: 1.5rem; color: var(--text-muted); line-height: 1.6;">
               Rather than functioning only as centralized organizational funding, support was directed toward 
-              active regional contributors and practical community outcomes, including university onboarding, 
-              creator education, Base Builder Grant access, and SongChain development.
+              active regional contributors and community-led infrastructure, including university onboarding, 
+              creator education, and regional coordination.
             </p>
             <div class="metrics-grid" style="margin-top: 3rem;">
               <div class="metric">
@@ -413,9 +413,9 @@
           <div style="grid-column: span 6;" class="reveal">
             <div class="program-card-large" style="margin-top: 2rem;">
               <div class="p-num">03</div>
-              <h3>Song Chain App</h3>
-              <p>The first major product from the Livingstone Chapter. A project exploring onchain music collaboration and peer-to-peer distribution models in Southern Africa.</p>
-              <span class="p-tag">Shipped</span>
+              <h3>Regional Coordination</h3>
+              <p>Standardizing operations across five chapter squares. We focus on governance alignment, cross-border resource sharing, and ensuring regional autonomy for Southern African builders.</p>
+              <span class="p-tag">Strategic</span>
             </div>
           </div>
           <div style="grid-column: span 6;" class="reveal delay-1">
@@ -568,18 +568,18 @@
           <div class="program-row">
             <div class="program-icon">&#9679;</div>
             <div class="program-body">
-              <div class="program-name">IRL Community Calls</div>
-              <p class="program-desc">In-person meetups across Zambia chapters. Documentation via @BobbiAndrea_ZM.</p>
+              <div class="program-name">IRL Community Operations</div>
+              <p class="program-desc">Regional coordination and governance alignment across five squares. Documentation via @BobbiAndrea_ZM.</p>
             </div>
             <div class="program-tag">Ongoing</div>
           </div>
           <div class="program-row">
             <div class="program-icon">&#9679;</div>
             <div class="program-body">
-              <div class="program-name">Song Chain App</div>
-              <p class="program-desc">Onchain music application built by the Livingstone Chapter.</p>
+              <div class="program-name">DAO Voting Structure</div>
+              <p class="program-desc">Implementing 5-seat governance for regional autonomy and balanced ecosystem decision-making.</p>
             </div>
-            <div class="program-tag">Shipped</div>
+            <div class="program-tag">Active</div>
           </div>
         </div>
       </div>
@@ -634,6 +634,46 @@
     </div>
   </footer>
 
-  <script src="src/main.js" defer></script>
+  <button class="assistant-trigger" id="assistant-trigger">
+    <span></span> Ask BCSA
+  </button>
+
+  <div class="assistant-panel" id="assistant-panel">
+    <div class="assistant-header">
+      <h3>Ask BCSA</h3>
+      <button class="assistant-close" id="assistant-close">&times;</button>
+    </div>
+    <div class="assistant-body">
+      <p>Explore the BCSA dossier through guided questions.</p>
+      <div class="assistant-q-list">
+        <button class="assistant-q-btn" data-answer="q1">What is BCSA?</button>
+        <button class="assistant-q-btn" data-answer="q2">What are the active squares?</button>
+        <button class="assistant-q-btn" data-answer="q3">Who is on the governance council?</button>
+        <button class="assistant-q-btn" data-answer="q4">What proof of work exists?</button>
+        <button class="assistant-q-btn" data-answer="q5">What support helped the region grow?</button>
+        <button class="assistant-q-btn" data-answer="q6">How can someone support or join?</button>
+      </div>
+      <div id="q1" class="assistant-answer">
+        BCSA operates as the Southern Africa Regional Square within the BasedCreators sub-DAO network under Agency DAO. We focus on creator onboarding, education, chapter support, and regional coordination on Base.
+      </div>
+      <div id="q2" class="assistant-answer">
+        Official 5 Active Squares list: BCSA Regional Square, UNZA Chapter Square, Livingstone Chapter Square, Malawi Chapter Square, and South Africa Chapter Square.
+      </div>
+      <div id="q3" class="assistant-answer">
+        The BCSA governance council uses a 5-seat structure: Bobbi Andrea as President, Sampa as Vice President & Treasurer, Mwimba Kanjanga as Secretary, Lady Light as Education Lead, and Base Zambia as Operations, DEV & Support.
+      </div>
+      <div id="q4" class="assistant-answer">
+        The dossier documents community activity, chapter coordination, creator programs, university onboarding, public evidence, regional support, and projects such as SongChain.
+      </div>
+      <div id="q5" class="assistant-answer">
+        BCSA began as a grassroots regional effort and later received ecosystem support through BasedCreators Global and Agency DAO, directed toward active contributors and practical outcomes such as onboarding, creator education, documentation workflows, artist coordination, and local creator hub experiments.
+      </div>
+      <div id="q6" class="assistant-answer">
+        Partners, builders, creators, and community leads can support through education, creator programs, chapter activation, documentation, grants, mentorship, and regional collaboration.
+      </div>
+    </div>
+  </div>
+
+  <script src="src/main.js"></script>
 </body>
 </html>

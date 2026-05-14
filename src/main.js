@@ -315,3 +315,56 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
 });
+
+/* --- ASSISTANT LOGIC --- */
+const assistantTrigger = document.getElementById('assistant-trigger');
+const assistantPanel = document.getElementById('assistant-panel');
+const assistantClose = document.getElementById('assistant-close');
+const assistantQBtns = document.querySelectorAll('.assistant-q-btn');
+const assistantAnswers = document.querySelectorAll('.assistant-answer');
+
+if (assistantTrigger && assistantPanel && assistantClose) {
+  assistantTrigger.addEventListener('click', () => {
+    assistantPanel.classList.toggle('active');
+  });
+
+  assistantClose.addEventListener('click', () => {
+    assistantPanel.classList.remove('active');
+  });
+
+  // Close on click outside
+  document.addEventListener('click', (e) => {
+    if (!assistantPanel.contains(e.target) && !assistantTrigger.contains(e.target)) {
+      assistantPanel.classList.remove('active');
+    }
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      assistantPanel.classList.remove('active');
+    }
+  });
+
+  // Question handlers
+  assistantQBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const answerId = btn.getAttribute('data-answer');
+      const targetAnswer = document.getElementById(answerId);
+
+      // Hide others
+      assistantAnswers.forEach(ans => {
+        if (ans.id !== answerId) ans.style.display = 'none';
+      });
+
+      // Toggle current
+      if (targetAnswer.style.display === 'block') {
+        targetAnswer.style.display = 'none';
+      } else {
+        targetAnswer.style.display = 'block';
+        targetAnswer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    });
+  });
+}
+
