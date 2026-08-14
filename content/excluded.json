@@ -1,0 +1,250 @@
+{
+  "_meta": {
+    "title": "Excluded material — must not be published or attributed",
+    "purpose": "A standing record of what must not appear in the portfolio and why. Kept in the repository so that an exclusion decided once is not quietly reversed by later work or by a future search result.",
+    "compiled": "2026-08-14",
+    "data_handling_rule": "Reasons in this file describe the category of sensitive material without restating it. This file must never contain the phone numbers, personal names, financial figures, transaction identifiers, tracking numbers or roster contents that it exists to keep out of the repository."
+  },
+
+  "entities": [
+    {
+      "id": "the-slim-podcast",
+      "name": "The Slim Podcast",
+      "status": "EXCLUDED",
+      "reason": "It is not Bobbi Andrea's project and Bobbi does not have sufficient ownership/rights/relationship to present it as his work.",
+      "must_not_describe_bobbi_as": [
+        "founder",
+        "owner",
+        "creator",
+        "co-host",
+        "contributor",
+        "producer"
+      ],
+      "must_not_list_as": [
+        "a project",
+        "media experience",
+        "employment",
+        "a collaboration"
+      ],
+      "must_not_use": [
+        "its branding",
+        "its description as Bobbi Andrea's biography",
+        "its name in SEO metadata",
+        "its name in structured data or schema markup",
+        "any role associated with it to describe Bobbi Andrea"
+      ],
+      "must_not_appear_in": [
+        "homepage",
+        "work index",
+        "CV",
+        "trajectory",
+        "case studies",
+        "metadata",
+        "schema and structured data",
+        "portfolio cards",
+        "project lists",
+        "social metadata",
+        "future generated content"
+      ],
+      "origin": "Earlier research incorrectly attributed a relationship between Bobbi Andrea and this podcast. The attribution was wrong and has been withdrawn. Bobbi Andrea does not claim ownership and does not have the level of relationship with it required for it to appear as his work.",
+      "replacement": "The media experience to represent instead is 'Blockchain & AI radio show — DC Radio', recorded as dc-radio-blockchain-ai-show in work.json.",
+      "instruction": "Do not include The Slim Podcast anywhere in portfolio-facing content, in any section, in any capacity, including as a mention or a link. It exists only in this exclusion record so that it cannot accidentally be reintroduced later. If it resurfaces in a future search result, treat this entry as authoritative and do not re-add it.",
+      "repository_status": "No reference to The Slim Podcast exists anywhere in this repository's files. Verified by search. Nothing needed removing; this record is preventative."
+    }
+  ],
+
+  "assets_removed": {
+    "_note": "18 image files removed from the working tree. Each was individually inspected before the decision. Filenames in this asset set were unreliable and several actively misdescribed their contents, so the reason recorded below reflects what the file actually contained rather than what its name suggested.",
+    "removed_in_commit": "Remove 18 images containing personal and sensitive material",
+    "history_status": "Removed from HEAD only. Present in earlier commits. Git history has not been rewritten.",
+    "files": [
+      { "file": "xtra-01.jpg", "reason": "Financial transaction receipt showing an amount, a transaction identifier and a date." },
+      { "file": "xtra-02.jpg", "reason": "Financial transaction receipt showing an amount, a transaction identifier and a date." },
+      { "file": "xtra-03.jpg", "reason": "Financial transaction receipt showing an amount, a transaction identifier and a date." },
+      { "file": "xtra-04.jpg", "reason": "Financial transaction receipt showing an amount, a transaction identifier and a date." },
+      { "file": "xtra-05.jpg", "reason": "Financial transaction receipt showing an amount, a transaction identifier and a date." },
+      { "file": "reg-flyer.jpg", "reason": "Messaging-app member roster listing dozens of real people's display names, personal status text and profile photographs. Named as if it were an event flyer." },
+      { "file": "discord.jpg", "reason": "Messaging-app group list exposing a personal phone number, repeated across several rows, together with internal group names." },
+      { "file": "east-africa.jpg", "reason": "Messaging-app community screen exposing the same personal phone number and internal group names." },
+      { "file": "comm-info.jpg", "reason": "Social post exposing a third party's full name and account handle alongside several other people's handles, plus a member grid with usernames." },
+      { "file": "based-mornings.jpg", "reason": "Social post containing a member grid of third-party usernames and identifiable profile photographs, including an apparent full name." },
+      { "file": "wa-01.jpg", "reason": "Live audio-call screen showing the display names and profile photographs of six participants." },
+      { "file": "wa-03.jpg", "reason": "Personal email showing a purchase confirmation and a full shipment tracking number." },
+      { "file": "x-posts.jpg", "reason": "Social timeline containing a reposted photograph of an identifiable third party and a scannable QR code." },
+      { "file": "event-11.jpg", "reason": "Photograph of a screen displaying an internal organisational document that named office-holders and their governance and treasury duties." },
+      { "file": "event-12.jpg", "reason": "Close-up photograph of two identifiable individuals, one displaying a cryptocurrency wallet interface." },
+      { "file": "irl-01.jpg", "reason": "Screenshot of a third party's private social media story showing identifiable people, including an infant. This file was also the site's Open Graph share image." },
+      { "file": "irl-02.jpg", "reason": "Screenshot of an electronic signature form containing personal-data fields including date of birth and a national identification number field, a third party's given name, and a partially visible face." },
+      { "file": "irl-03.jpg", "reason": "Screenshot of an internal planning document covering leadership, operations, treasury, governance and outreach tasks." }
+    ]
+  },
+
+  "assets_consent_required": {
+    "_note": "Retained in the repository but not referenced by any page. These are the visually strongest images in the asset set and the only ones that convey a real community event, so obtaining consent is worthwhile. They must not be published until consent from the identifiable people is recorded here.",
+    "consent_status": "not obtained",
+    "files": [
+      { "file": "council.jpg", "content": "Roughly eight to ten people working at tables in an open-air cafe. Several faces partly identifiable. Filename is misleading; it is not a governance document." },
+      { "file": "event-01.jpg", "content": "About twelve people eating and working at a long table in an open-air cafe. Faces partly identifiable." },
+      { "file": "event-05.jpg", "content": "Six people in a cafe workspace, one standing in the foreground. Faces identifiable." },
+      { "file": "event-06.jpg", "content": "About fifteen people eating at long tables. Faces identifiable." },
+      { "file": "event-07.jpg", "content": "Close-up of five seated people, one clearly in focus, with a photographer standing nearby." },
+      { "file": "event-13.jpg", "content": "Four people posing in front of a third-party events company's banner indoors. Faces clearly identifiable, and a third-party business name is visible." },
+      { "file": "malawi.jpg", "content": "Two people in conversation at a cafe table. Faces clearly identifiable. Filename is misleading; the setting appears to be the same cafe as the other event photographs." }
+    ]
+  },
+
+  "assets_publishable": {
+    "_note": "Individually inspected, no identifiable people, no personal data. Safe to publish in principle, but NOT approved for the gallery: the gallery must not be populated with cafe interiors, food photographs or unrelated images merely to fill space. Three of these were briefly used in the gallery during the privacy cleanup and have since been removed for exactly that reason. The gallery is deferred until suitable material exists.",
+    "gallery_rule": "The gallery should contain photography of Bobbi Andrea, legitimate work, events, creative output, or approved community and event photography. If suitable material is unavailable, defer the gallery rather than filling it.",
+    "files": [
+      { "file": "event-02.jpg", "content": "Interior of an open-air cafe with woven pendant lamps above empty wooden tables.", "in_use": false },
+      { "file": "event-08.jpg", "content": "A laptop on a cafe table displaying a chapter logo, with a coffee cup beside it.", "in_use": false },
+      { "file": "event-10.jpg", "content": "An empty outdoor venue at night with hanging lamps and a lit projection screen.", "in_use": false },
+      { "file": "event-03.jpg", "content": "Plates of grilled whole fish served on fish-shaped wooden boards.", "in_use": false },
+      { "file": "event-04.jpg", "content": "Fried chicken and vegetables on a wooden serving board next to a laptop.", "in_use": false },
+      { "file": "event-09.jpg", "content": "A hand holding several gift voucher tickets for a venue.", "in_use": false },
+      { "file": "linkup.jpg", "content": "Promotional graphic announcing a regional meeting on Discord. Carries BCSA branding and a public Discord invite URL.", "in_use": false },
+      { "file": "wa-02.jpg", "content": "Event flyer for a community call, over a photograph of a bonfire. Carries BCSA branding. Filename is misleading; it is not a messaging-app screenshot.", "in_use": false }
+    ]
+  },
+
+  "assets_weak": {
+    "_note": "Retained, unreferenced, and not recommended for publication. All are screenshots of social media, messaging or profile interfaces. Each contains at least one third-party account handle, engagement metric, or follower count. They are technically publishable but they are not portfolio material, and several are the only in-repository source for figures that are quarantined in work.json.",
+    "files": [
+      { "file": "batches.jpg", "content": "Social post about a personal purchase of an AI wearable device, with a partially visible face in a video thumbnail." },
+      { "file": "bobbi.jpg", "content": "Screenshot of an organisation account's photos tab. IMPORTANT: this is not a photograph of Bobbi Andrea, despite the filename and its caption in the now-deleted image manifest. There is no photograph of Bobbi Andrea anywhere in this repository." },
+      { "file": "bukelo.jpg", "content": "Screenshot of a social replies feed with a quoted post and an embedded call grid." },
+      { "file": "content-lab.jpg", "content": "Screenshot of a social post announcing a live audio session. Filename does not match the content." },
+      { "file": "fireside.jpg", "content": "Screenshot of an organisation's social profile page showing bio and follower counts." },
+      { "file": "groups.jpg", "content": "Screenshot of a messaging-app community info screen showing group and member counts. This is the only in-repository source for two of the quarantined BCSA figures." },
+      { "file": "members.jpg", "content": "Screenshot of a social post announcing a community call, carrying the engagement figure behind one quarantined claim." },
+      { "file": "reg-meeting.jpg", "content": "Screenshot of a social post announcing a workshop series. Filename does not match the content." },
+      { "file": "x-profile.jpg", "content": "Screenshot of a social feed showing a countdown graphic for an application deadline. Filename does not match the content." }
+    ]
+  },
+
+  "excluded_framings": {
+    "_note": "Ways of presenting true facts that would still be misleading, recorded so they are not reintroduced during the design and copy phases.",
+    "items": [
+      { "framing": "BCSA presented as active, ongoing, currently operating, currently recruiting, or currently running programmes", "instruction": "Past tense only. Status labels must read Completed or Archived, never Active." },
+      { "framing": "A 'BUILT ON BASE' badge or status tag used as a personal-site endorsement", "instruction": "Do not use. Base appears as part of Bobbi's work and history, not as the owner of the portfolio." },
+      { "framing": "Base's brand colour treated as Bobbi Andrea's own brand identity", "instruction": "Use a distinct personal accent instead. The current stylesheet uses Base's exact brand blue in a token named --base-blue; this is to be replaced with a personal accent in the design phase." },
+      { "framing": "Base's logo or wordmark used as Bobbi Andrea's identity, or language implying official Base affiliation", "instruction": "Do not use. Base may be mentioned factually where relevant." },
+      { "framing": "The BCSA visual identity used in a way that makes the personal portfolio look like the official BCSA website", "instruction": "Do not carry over the BCSA wordmark or identity as the portfolio's own." },
+      { "framing": "SWICE reduced to 'a trading project' or 'a trading bot'", "instruction": "SWICE is a personal AI OS with a deterministic financial execution subsystem. Trading is one capability, not the identity." },
+      { "framing": "SWICE implied to be a commercially deployed autonomous financial product", "instruction": "It is in development, not publicly available as a finished product, not production software, and not a live-money trading service." },
+      { "framing": "Internal engineering milestones such as a passing test count presented as public product achievements", "instruction": "Internal project history is not marketing copy. Only explicitly approved technical detail may be published." },
+      { "framing": "'Bobbi used to do random things and now builds a trading bot'", "instruction": "The trajectory is progression, not replacement. The earlier creative, music, design, radio and community work is what led to the current software and AI direction, and SWICE is the current flagship rather than the whole identity." },
+      { "framing": "The gallery filled with cafe interiors, food photographs or unrelated images to avoid an empty section", "instruction": "Defer the gallery instead." },
+      { "framing": "A screenshot of a social-media photos tab presented as a headshot", "instruction": "There is no headshot in this repository. Leave it as a pending asset; do not substitute and do not fabricate a portrait." },
+      { "framing": "Random generated points or decorative geography presented as real ecosystem data", "instruction": "The old BCSA Ecosystem Map and Regional Footprint visualisations are based on randomly generated positions and are approved for removal. Technical visualisation must communicate something real or remain clearly atmospheric." },
+      { "framing": "Third-party platform links retained merely because they existed on the old BCSA site", "instruction": "Remove from a personal portfolio's navigation." },
+      { "framing": "Empty startup language such as revolutionary, game-changing, world-class, industry-leading or visionary", "instruction": "Do not use without a specific factual basis. Explain what Bobbi Andrea actually did." },
+      { "framing": "Ecosystem participation written as ownership or founding", "instruction": "'Worked within the Base ecosystem' is not 'founded Base'. Applies equally to Zora, Farcaster, Coinbase and Ethereum." },
+      { "framing": "Employment history flattened into 'projects'", "instruction": "Employment, roles, projects, creative work, media and experiments are distinct types and must be presented as such." },
+      { "framing": "The graphic-design career or the music and radio history omitted because software and AI is the current focus", "instruction": "The site must show evolution, not replace the earlier chapters." },
+      { "framing": "Bobbi reduced to a single identity: Web3 person, community manager, graphic designer, musician, or developer", "instruction": "The portfolio exists to show the whole trajectory and how the disciplines connect." },
+      { "framing": "The dossier's expansion pipeline of named prospective institutions presented as achieved or current", "instruction": "It was future-facing at time of writing. Either reframe as historical intent or remove." },
+      { "framing": "SongChain presented as Bobbi's project", "instruction": "Recorded as third-party work. See the songchain entry in work.json." },
+      { "framing": "Quantitative claims restated because they already appear in this repository", "instruction": "Every figure in the quarantined_claims list requires an explicit per-item decision. Default if undecided is to omit." }
+    ]
+  },
+
+  "outstanding_cleanup": {
+    "_note": "Cannot be completed from within this repository. Recorded so it is not forgotten.",
+    "items": [
+      {
+        "item": "Git history",
+        "status": "outstanding",
+        "detail": "The removed files exist in earlier commits. This repository is public, so they remain retrievable from the hosting provider until history is rewritten. Rewriting was deliberately deferred pending a separate decision."
+      },
+      {
+        "item": "Previous deployments",
+        "status": "outstanding",
+        "detail": "This project has been deployed to Vercel. Past deployments are retained at their own immutable URLs and continue to serve the removed files independently of the current branch state. They must be deleted from the hosting dashboard by the account owner."
+      },
+      {
+        "item": "Production branch",
+        "status": "outstanding",
+        "detail": "The removals are on a working branch. The production deployment tracks the default branch and will continue serving the removed files until the change is merged."
+      },
+      {
+        "item": "Third-party caches",
+        "status": "outstanding",
+        "detail": "Search engines, social card scrapers and archiving services may hold independent copies. One removed file was the site's Open Graph share image, so it may be cached by any platform where a link to the site was posted."
+      }
+    ]
+  },
+
+  "privacy_actions_taken": {
+    "_note": "Completed on the working branch, beyond the image removal. Each was directed by an explicit instruction rather than chosen as a design change.",
+    "items": [
+      {
+        "item": "Leadership roster",
+        "action": "The roster block naming four people besides Bobbi Andrea, with links to their accounts, has been removed from index.html, together with the sentence describing the governance structure that the block illustrated.",
+        "reason": "Conflicting third-party rosters are not to be published while unresolved, and unnecessary personal information about former team members is not to be exposed. No replacement copy was written."
+      },
+      {
+        "item": "Open group invite links",
+        "action": "Live WhatsApp and Telegram invite links removed from the navigation on both pages.",
+        "reason": "They were open invitations into a community that is no longer operating and whose member roster was among the material removed for privacy."
+      },
+      {
+        "item": "Third-party platform navigation",
+        "action": "The platform dropdown linking four external organisation and agency platforms removed from both pages.",
+        "reason": "Third-party platform links are not retained on a personal portfolio merely because they existed on the old BCSA site."
+      },
+      {
+        "item": "Gallery images",
+        "action": "The three cafe and venue photographs briefly used during the privacy cleanup have been removed and the gallery is deferred. No page references any image.",
+        "reason": "The gallery must not be populated with cafe interiors, food photographs or unrelated images to fill space."
+      },
+      {
+        "item": "Archived BCSA report — redactions",
+        "action": "The report was rebuilt at /archive/bcsa-report/ with an archival banner and noindex. Three categories were withheld from the archived copy: the quantitative claims, the names of individual third-party contributors, and the forward-looking expansion and next-steps sections. The page states plainly what was withheld and why.",
+        "reason": "Unconfirmed figures are omitted rather than published behind a disclaimer, and third-party names are not republished without agreement. The unredacted original remains in git history and can be restored if the figures are substantiated and the named contributors agree.",
+        "requires_signoff": true
+      }
+    ]
+  },
+
+  "pending_privacy_decisions": {
+    "_note": "Still live on the published page. Not changed, because these require rewritten copy rather than removal, and the page is being rewritten in a later phase.",
+    "items": [
+      {
+        "item": "Remaining BCSA account links",
+        "detail": "The dossier still links the BCSA organisation's own social accounts and an external Discord. These are organisation accounts rather than personal data, and they are coherent while the page is still the BCSA dossier.",
+        "recommendation": "Decide which, if any, belong on a personal portfolio when the page is rewritten."
+      },
+      {
+        "item": "Unverified claims still published",
+        "detail": "All nine quarantined claims in work.json remain visible on both pages, including the metrics, the founding date and the statement that a third-party application was funded and launched. Removing them requires rewriting the surrounding copy.",
+        "recommendation": "Resolve in the content phase. Default is to omit."
+      },
+      {
+        "item": "Present-tense operational copy",
+        "detail": "The pages still describe BCSA as active, including an 'Operational Status' badge and a forward-looking expansion pipeline naming prospective institutions.",
+        "recommendation": "Resolve in the content phase; requires rewriting rather than deletion."
+      }
+    ]
+  },
+
+  "approved_decisions": {
+    "_note": "Explicitly directed and safe to implement in the design and content phases without asking again.",
+    "items": [
+      "Replace Base's exact brand blue with a distinct personal accent.",
+      "Remove the 'BUILT ON BASE' badge.",
+      "Remove third-party platform links from navigation.",
+      "Remove the BCSA Ecosystem Map and Regional Footprint WebGL visualisations, which are based on randomly generated positions.",
+      "Keep the hero WebGL atmosphere, which is technically sound, and keep the existing typography, grid logic, panels, restrained motion and editorial structure.",
+      "Defer the gallery until suitable material exists.",
+      "Create a typographic Open Graph image, since no safe personal photography exists.",
+      "Keep the zero-build static architecture — static HTML, CSS, vanilla JavaScript, static assets; introduce no component framework.",
+      "Keep content visible without JavaScript; JavaScript may enhance filtering, animation and interaction but must never be required to access content.",
+      "Respect prefers-reduced-motion, keyboard navigation, touch navigation, semantic HTML, responsive design, graceful WebGL failure and performance.",
+      "Use clean URLs at /work/, /work/swice/, /work/bcsa/, /archive/bcsa-report/ and /about/, with /report.html redirecting to the archive.",
+      "Do not create the later project pages (/work/crypto-4-nilubilo/, /work/music/, /work/dc-radio/, /work/design/, /work/experiments/) until their content is sufficiently known.",
+      "Use 'Blockchain & AI radio show — DC Radio' as the neutral display formulation until the exact title and role are confirmed."
+    ]
+  }
+}
