@@ -40,7 +40,7 @@
     "categories": "fine-grained tags: graphic-design, music-art, radio-media, web3-onchain, community-ecosystem, events-education, software-ai, employment-roles",
     "role": "Bobbi Andrea's role in his own words. null when not yet confirmed; never inferred from a job title or a project name.",
     "summary": "publishable one-line description. null where nothing factual has been supplied.",
-    "timeframe": "start and end as YYYY or YYYY-MM; precision is exact | approx | unknown",
+    "timeframe": "start and end as YYYY or YYYY-MM; precision is exact | exact_years (year range confirmed, months not supplied) | approx | unknown",
     "links": "public URLs only, each with its own evidence level",
     "media": "associated approved assets; pending where none exist",
     "evidence": "VERIFIED_PUBLIC | USER_PROVIDED | INTERNAL_PROJECT_HISTORY | NEEDS_VERIFICATION | UNCERTAIN | EXCLUDED",
@@ -188,14 +188,16 @@
       "disciplines": ["community-ecosystem", "onchain-web3"],
       "index_filter": "community",
       "categories": ["community-ecosystem", "web3-onchain", "events-education"],
-      "role": null,
-      "role_context": "Bobbi Andrea previously held a leadership role. The dossier in this repository lists him as President. Historical role only. He is not its current president and it is not his current organisation.",
-      "summary": "Completed community and ecosystem work in Southern Africa, in which Bobbi Andrea previously held a leadership role.",
+      "role": "Regional President, Southern African Region",
+      "role_evidence": "USER_PROVIDED",
+      "role_context": "Confirmed by Bobbi Andrea as the authoritative official title, replacing the earlier generic wording 'leadership role'. Historical only: he is not its current president and it is not his current organisation. Use the full title; do not shorten it to 'President'.",
+      "role_title_caveat": "The title contains the words 'Southern African Region'. That is the title of the office, not a confirmed statement of where the chapter operated. It must not be converted into a geographic footprint claim, and it does not license publishing Malawi, South Africa, Lusaka, Livingstone or Johannesburg as BCSA footprint facts. See the geography block below, which is unchanged.",
+      "summary": "Completed community and ecosystem work in which Bobbi Andrea served as Regional President, Southern African Region.",
       "timeframe": {
         "start": "2025",
         "end": "2026",
-        "precision": "approx",
-        "note": "Supplied as the period 2025–2026. The dossier's own timeline entry 'Oct 2025 — Chapter Founded' is INTERNAL_PROJECT_HISTORY and the specific month is unverified, so the year is used rather than the month. Exact start and end dates must come from Bobbi Andrea and must not be invented. Confirmed completed and no longer operating."
+        "precision": "exact_years",
+        "note": "The 2025–2026 period is confirmed by Bobbi Andrea. The specific months within it are not supplied, so years are used rather than months and must not be narrowed by inference; the dossier's own 'Oct 2025 — Chapter Founded' entry is INTERNAL_PROJECT_HISTORY and is not treated as the start date. Confirmed completed and no longer operating."
       },
       "work_described_by_user": [
         "regional creator/community coordination",
@@ -255,8 +257,7 @@
         "any quarantined figure above"
       ],
       "confirmation_required": [
-        "Exact role title and role wording",
-        "Start and end dates of Bobbi's involvement, and the chapter's end date",
+        "Exact start and end dates within the confirmed 2025-2026 period",
         "Which specific events and activations took place, with dates",
         "Whether any quarantined figure is independently supported and should be published",
         "Whether the former team may be described without naming individuals",

@@ -170,8 +170,8 @@ Everything below is blocked on information that has not been supplied, or must b
 - [ ] **Headshot**, plus any approved photography for a gallery.
 - [ ] **Music links** — no audio, release page or artwork exists in the repository.
 - [ ] **Design portfolio assets** at real resolution.
-- [ ] **Exact wording** for: the DC Radio show title and role; the BCSA official title; the New School Rhythms
-      dates; On Base Rhythms' scope; whether "New School Rhythmz" and "New School Rhythms" are one entity.
+- [ ] **Exact wording** for: the DC Radio show title and role; the New School Rhythms dates; On Base Rhythms'
+      scope; whether "New School Rhythmz" and "New School Rhythms" are one entity.
 - [ ] **SWICE disclosure boundaries** — which technical detail may be published.
 - [ ] **BCSA figures** — a per-item decision on each quarantined claim. Default is to omit.
 - [ ] **Consent** for the seven retained photographs of identifiable people.

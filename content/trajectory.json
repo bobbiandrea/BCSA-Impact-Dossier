@@ -20,7 +20,7 @@
     "role": "job title exactly as supplied; null where not yet confirmed",
     "type": "EMPLOYMENT | ROLE | MEDIA | COMMUNITY",
     "tense": "historical | current | unresolved",
-    "start / end": "YYYY or YYYY-MM; precision is exact | approx | unknown",
+    "start / end": "YYYY or YYYY-MM; precision is exact | exact_years (year range confirmed, months not supplied) | approx | unknown",
     "disciplines": "practice areas, as in work.json",
     "evidence": "as defined in work.json",
     "work_ref": "related entry slug in work.json where one exists",
@@ -199,15 +199,15 @@
     {
       "slug": "bcsa-leadership",
       "organisation": "Based Creators Southern Africa (BCSA)",
-      "role": null,
+      "role": "Regional President, Southern African Region",
       "type": "ROLE",
       "tense": "historical",
       "start": "2025",
       "end": "2026",
-      "precision": "approx",
+      "precision": "exact_years",
       "disciplines": ["community-ecosystem", "onchain-web3"],
       "categories": ["community-ecosystem", "web3-onchain"],
-      "summary": "Previously held a leadership role in Based Creators Southern Africa.",
+      "summary": "Served as Regional President, Southern African Region, at Based Creators Southern Africa.",
       "evidence": "USER_PROVIDED",
       "visibility": "published",
       "work_ref": "bcsa",
@@ -217,11 +217,10 @@
         "that the role is ongoing"
       ],
       "confirmation_required": [
-        "Exact official role title and wording",
-        "Exact start and end dates within the 2025–2026 period",
+        "Exact start and end dates within the confirmed 2025–2026 period",
         "Whether the role was voluntary or compensated, and whether that should be stated"
       ],
-      "notes": "Historical leadership role only, recorded for the supplied 2025–2026 period. The dossier lists him as President; the supplied history confirms a leadership role and confirms it is historical, so the exact official title is held pending confirmation rather than taken from the dossier. Recorded as a role rather than employment. Treated as community, ecosystem and leadership experience, not as a personal startup."
+      "notes": "Historical role only, for the confirmed 2025–2026 period. The official title is confirmed as Regional President, Southern African Region, and is used in full rather than shortened to President. The words 'Southern African Region' are part of the office title and must not be republished as a geographic footprint claim. Recorded as a role rather than employment. Treated as community, ecosystem and leadership experience, not as a personal startup."
     },
     {
       "slug": "base-zambia-involvement",
