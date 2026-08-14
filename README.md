@@ -3,6 +3,47 @@
 **Based Creators Southern Africa (@BCSA_Region)**
 Impact Report 2025—2026 — Official southern region chapter site.
 
+> **Status:** this repository is being reconstructed as the personal portfolio and digital
+> archive of Bobbi Andrea. BCSA is a completed chapter of that work and is being re-framed
+> as historical material. The pages below still contain the original BCSA copy and have not
+> yet been rewritten. See `content/` for the editorial and evidence ledger that the new site
+> will be built from.
+
+---
+
+## Privacy & data handling
+
+18 image files were removed from this repository because they contained personal or
+sensitive material: financial transaction receipts, a phone number, a community member
+roster with real names and profile photos, live-call participant lists, a shipping tracking
+number, internal planning and governance documents, an electronic signature form with
+personal-data fields, and third-party private social content. They are listed in
+`content/excluded.json` with the reason for each, described generically so that this
+repository does not restate the data it is meant to remove.
+
+**Cleanup that is still outstanding and cannot be done from this repository:**
+
+- **Git history.** The files were removed from the current `HEAD` only. Every earlier commit
+  still contains them, and because this repository is public they remain retrievable from
+  GitHub until history is rewritten. That decision is deliberately deferred.
+- **Previous deployments.** This project has been deployed to Vercel. Vercel retains every
+  past deployment at its own immutable URL, so earlier builds continue to serve the removed
+  files regardless of the current state of `main`. These must be deleted from the Vercel
+  dashboard by the account owner.
+- **Third-party caches.** Search engines, social-card scrapers, and archiving services may
+  hold copies of the removed images independently of both of the above.
+
+**Rules for adding images to this repository:**
+
+1. Inspect every image individually before use. Filenames in the original asset set were
+   unreliable and several actively misdescribed their contents.
+2. Do not publish an image containing an identifiable person without recorded consent.
+   Consent status is tracked per file in `content/excluded.json`.
+3. Do not publish screenshots of chat apps, member lists, email, documents, payment
+   confirmations, or wallet interfaces.
+4. Write `alt` text that describes what is actually in the image, not what it is meant to
+   demonstrate.
+
 ---
 
 ## 🏗️ Project Overview
@@ -24,9 +65,13 @@ bcsa-site/
 ├── report.html         ← Formal impact report (Data-driven)
 ├── netlify.toml        ← Netlify deployment config
 ├── vercel.json         ← Vercel deployment config
+├── content/            ← Editorial & evidence ledger (not rendered)
+│   ├── work.json       ← Projects, roles, creative work, experiments
+│   ├── trajectory.json ← Employment & professional history
+│   └── excluded.json   ← Material that must not be published, with reasons
 ├── public/
 │   ├── favicon.svg     ← BCSA brand favicon
-│   └── images/         ← Verified IRL activity photos & social proof
+│   └── images/         ← Image assets (see "Privacy & data handling" above)
 └── src/
     ├── styles.css      ← Design system & brand-aligned styles
     └── main.js         ← Interactive logic, Three.js scenes, & UI state
@@ -85,9 +130,10 @@ All content is in `index.html` — open it in Windsurf/VS Code and edit:
 
 ## Image Notes
 
-Images are in `public/images/`. They load lazily (`loading="lazy"`) so
-the page loads fast even with 42 photos. The hero image loads with
-priority (`fetchpriority="high"`).
+Images are in `public/images/` and load lazily (`loading="lazy"`). 24 files remain after the
+privacy removal described above. Only images that contain no identifiable people are
+currently published; the rest are retained in the repository but unreferenced, pending
+consent decisions recorded in `content/excluded.json`.
 
 If you want to compress images for even faster load:
 ```
