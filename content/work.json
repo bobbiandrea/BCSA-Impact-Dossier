@@ -510,18 +510,32 @@
       "notes": "A distinct creative-work entry, kept in the portfolio despite being historical and despite the change of direction. The involvement list is the confirmed scope and is not to be expanded. DJ Swice Adonis is named only as the CEO whose death preceded the change of direction, in Bobbi Andrea's own framing."
     },
     {
-      "slug": "new-school-rhythmz",
-      "title": "New School Rhythmz",
+      "slug": "new-school-rhythmz-443",
+      "title": "New School Rhythmz 443",
       "type": "CREATIVE_WORK",
       "status": "CURRENT",
       "disciplines": ["creative", "onchain-web3"],
       "index_filter": "creative",
       "categories": ["music-art", "web3-onchain"],
       "role": null,
-      "summary": "An in-development game exploring a continuation of the New School Rhythms movement and bringing artists onchain.",
-      "timeframe": { "start": null, "end": null, "precision": "unknown", "note": "Still being worked on. No start date supplied and none may be invented." },
+      "summary": "An in-development game and project intended as a continuation of the New School Rhythms movement, exploring ways to bring artists onchain. Also described as a live onchain music event.",
+      "timeframe": { "start": null, "end": null, "precision": "unknown", "note": "Still being worked on. No dates supplied and none may be invented." },
+      "canonical_name": {
+        "_note": "The canonical name is 'New School Rhythmz 443', the more specific identity. It was previously recorded as two separate entries, 'New School Rhythmz' and 'New School Rhythmz 443'; that split was incorrect and has been merged. There is exactly one entry for this project.",
+        "superseded_names": ["New School Rhythmz"],
+        "evidence": "USER_PROVIDED"
+      },
+      "described_as": {
+        "_note": "Both descriptions come from Bobbi Andrea and are held together without inventing a link between them. No technical, chronological or causal relationship between the game and the live event may be asserted, because none has been supplied.",
+        "evidence": "USER_PROVIDED",
+        "items": [
+          "an in-development game and project continuing the New School Rhythms movement",
+          "a purpose that includes exploring ways to bring artists onchain",
+          "a live onchain music event"
+        ]
+      },
       "name_distinction": {
-        "_note": "RESOLVED. New School Rhythmz, with a z, is this game. New School Rhythms, with an s, is a separate radio show and movement at which Bobbi Andrea was Managing Director, recorded in trajectory.json. They are two different things and must never be merged, and 'Rhythmz' must never be normalised to 'Rhythms'. This is no longer an unresolved naming ambiguity.",
+        "_note": "RESOLVED. New School Rhythmz 443, with a z, is this project. New School Rhythms, with an s, is a separate radio show and movement at which Bobbi Andrea was Managing Director, recorded in trajectory.json. Those two remain different things and must never be merged, and 'Rhythmz' must never be normalised to 'Rhythms'.",
         "evidence": "USER_PROVIDED",
         "status": "resolved"
       },
@@ -534,44 +548,22 @@
         "that the game is finished",
         "that it has launched",
         "that it has users",
-        "that it has generated revenue",
-        "that artists have already onboarded through it",
-        "that it is commercially deployed",
-        "adoption, funding, partnership or performance figures",
+        "revenue",
+        "adoption figures",
+        "funding",
+        "partnerships",
+        "commercial deployment",
+        "artist onboarding numbers",
+        "any specific technical relationship between the live event and the game",
         "that it is the same entity as New School Rhythms"
       ],
       "confirmation_required": [
         "Stage of development, and whether any build may be shown",
         "Timeframe",
-        "Any link or asset",
-        "Its relationship, if any, to the New School Rhythmz 443 event"
+        "How the live onchain music event and the game relate, if at all",
+        "Any link or asset"
       ],
-      "notes": "A game, in development, intended as a continuation of the New School Rhythms movement as a Base-related project with the aim of bringing artists onchain. Purpose and status are supplied; nothing about completion, launch, adoption or onboarding may be added."
-    },
-    {
-      "slug": "new-school-rhythmz-443",
-      "title": "New School Rhythmz 443",
-      "type": "CREATIVE_WORK",
-      "status": "CREATIVE",
-      "disciplines": ["creative", "onchain-web3"],
-      "index_filter": "creative",
-      "categories": ["music-art", "web3-onchain"],
-      "role": null,
-      "summary": "A live onchain music event.",
-      "timeframe": { "start": null, "end": null, "precision": "unknown" },
-      "links": [],
-      "media": { "status": "pending" },
-      "evidence": "USER_PROVIDED",
-      "visibility": "published",
-      "caseStudy": null,
-      "must_not_claim": ["attendance figures", "that it is the game", "that it is the radio show and movement"],
-      "confirmation_required": [
-        "Date",
-        "Location or platform",
-        "Bobbi Andrea's role in it",
-        "Its relationship, if any, to the New School Rhythmz game"
-      ],
-      "notes": "Promoted to its own entry now that New School Rhythmz is confirmed as a game: an event and a game are different things, so 443 is recorded separately rather than folded into either. Whether the two are related has not been stated and is not inferred."
+      "notes": "One project, one entry. Previously and incorrectly split into a game entry and a separate event entry; merged here under the canonical name. Both of Bobbi Andrea's descriptions are preserved — an in-development game continuing the movement, and a live onchain music event — without asserting how they connect."
     },
     {
       "slug": "black-circle",

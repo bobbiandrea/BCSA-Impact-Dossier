@@ -187,13 +187,13 @@
       "evidence": "USER_PROVIDED",
       "visibility": "published",
       "work_ref": "new-school-rhythmz",
-      "must_not_claim": ["dates", "that it is the same entity as New School Rhythmz"],
+      "must_not_claim": ["dates", "that it is the same entity as New School Rhythmz 443"],
       "confirmation_required": [
         "Start and end dates — no dates were supplied and none may be invented",
         "Responsibilities, in Bobbi's own words",
         "Whether the role is current or historical"
       ],
-      "notes": "A radio show and movement, recorded with the 's' spelling. Confirmed as a different thing from New School Rhythmz, which is a game; the two must never be merged and the 'z' spelling must never be normalised. The name is not a typo. Dates render as 'date not supplied' rather than approximate, because no date was given at all."
+      "notes": "A radio show and movement, recorded with the 's' spelling. Confirmed as a different thing from New School Rhythmz 443, which is the in-development project; the two must never be merged and the 'z' spelling must never be normalised. The name is not a typo. Dates render as 'date not supplied' rather than approximate, because no date was given at all."
     },
     {
       "slug": "bcsa-leadership",
@@ -267,7 +267,7 @@
       "New School Rhythms — Managing Director",
       "Base Zambia — volunteer / moderator",
       "Crypto_4_Nilubilo",
-      "LANDENI, JAMS, On Base Rhythms, New School Rhythmz, Black Circle",
+      "LANDENI, JAMS, On Base Rhythms, New School Rhythmz 443, Black Circle",
       "Bobbi Andrea music",
       "SWICE"
     ]
