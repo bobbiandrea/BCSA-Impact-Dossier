@@ -20,7 +20,7 @@
     "role": "job title exactly as supplied; null where not yet confirmed",
     "type": "EMPLOYMENT | ROLE | MEDIA | COMMUNITY",
     "tense": "historical | current | unresolved",
-    "start / end": "YYYY or YYYY-MM; precision is exact | exact_years (year range confirmed, months not supplied) | approx | unknown",
+    "start / end": "YYYY or YYYY-MM; precision is exact | exact_years (year range confirmed, months not supplied) | exact_months (month range confirmed, days not supplied) | approx | unknown",
     "disciplines": "practice areas, as in work.json",
     "evidence": "as defined in work.json",
     "work_ref": "related entry slug in work.json where one exists",
@@ -143,37 +143,38 @@
     {
       "slug": "dc-radio-show-role",
       "organisation": "DC Radio",
-      "role": null,
-      "role_display": "Blockchain & AI radio show — DC Radio",
+      "role": "One of the hosts",
+      "role_display": "Host, EthZambezi Blockchain & AI Show — DC Radio",
       "type": "MEDIA",
       "tense": "historical",
-      "start": "2024",
-      "end": "2024",
-      "precision": "approx",
-      "duration_note": "Approximately one month. Specific month within 2024 not established.",
+      "start": "2024-04",
+      "end": "2024-05",
+      "precision": "exact_months",
+      "duration_note": "April–May 2024, confirmed. Exact days are not supplied and the period must not be extended.",
       "disciplines": ["creative", "onchain-web3"],
       "categories": ["radio-media", "web3-onchain", "software-ai"],
-      "summary": "Blockchain and AI radio show work at DC Radio, for approximately one month in 2024.",
+      "summary": "One of the hosts of the EthZambezi Blockchain & AI Show on DC Radio, April–May 2024.",
       "evidence": "USER_PROVIDED",
       "visibility": "published",
       "work_ref": "dc-radio-blockchain-ai-show",
       "must_not_claim": [
+        "sole host",
+        "creator or owner of the show",
         "ownership of DC Radio or the station",
         "the title Founder",
         "the title Executive Producer",
-        "any invented title"
+        "an exact day, or any period beyond April–May 2024"
       ],
       "confirmation_required": [
-        "Exact role wording",
-        "Exact show title",
-        "Specific dates within 2024",
-        "Station wording and URL"
+        "Station wording and URL",
+        "Any episode links or recordings"
       ],
-      "notes": "The bridge between the radio and media background and the blockchain and AI work. The role field is deliberately null and the display formulation is neutral; the neutral wording is the approved presentation, not a gap to be filled by a guess."
+      "notes": "The bridge between the radio and media background and the blockchain and AI work. Title, role and period are confirmed: one of the hosts, April–May 2024. He is not the sole host and not the creator or owner."
     },
     {
       "slug": "new-school-rhythms-md",
       "organisation": "New School Rhythms",
+      "organisation_description": "A radio show and movement.",
       "role": "Managing Director",
       "type": "EMPLOYMENT",
       "tense": "unresolved",
@@ -189,12 +190,10 @@
       "must_not_claim": ["dates", "that it is the same entity as New School Rhythmz"],
       "confirmation_required": [
         "Start and end dates — no dates were supplied and none may be invented",
-        "Whether this organisation is the same as the 'New School Rhythmz' music project",
-        "What the organisation is: label, company, collective or brand",
         "Responsibilities, in Bobbi's own words",
         "Whether the role is current or historical"
       ],
-      "notes": "Recorded with the 's' spelling as supplied. The distinction from 'New School Rhythmz' is preserved deliberately; see the naming_ambiguity block in work.json. Dates render as unknown rather than approximate, because no date was given at all."
+      "notes": "A radio show and movement, recorded with the 's' spelling. Confirmed as a different thing from New School Rhythmz, which is a game; the two must never be merged and the 'z' spelling must never be normalised. The name is not a typo. Dates render as 'date not supplied' rather than approximate, because no date was given at all."
     },
     {
       "slug": "bcsa-leadership",

@@ -40,7 +40,7 @@
     "categories": "fine-grained tags: graphic-design, music-art, radio-media, web3-onchain, community-ecosystem, events-education, software-ai, employment-roles",
     "role": "Bobbi Andrea's role in his own words. null when not yet confirmed; never inferred from a job title or a project name.",
     "summary": "publishable one-line description. null where nothing factual has been supplied.",
-    "timeframe": "start and end as YYYY or YYYY-MM; precision is exact | exact_years (year range confirmed, months not supplied) | approx | unknown",
+    "timeframe": "start and end as YYYY or YYYY-MM; precision is exact | exact_years (year range confirmed, months not supplied) | exact_months (month range confirmed, days not supplied) | approx | unknown",
     "links": "public URLs only, each with its own evidence level",
     "media": "associated approved assets; pending where none exist",
     "evidence": "VERIFIED_PUBLIC | USER_PROVIDED | INTERNAL_PROJECT_HISTORY | NEEDS_VERIFICATION | UNCERTAIN | EXCLUDED",
@@ -463,66 +463,115 @@
       "slug": "on-base-rhythms",
       "title": "On Base Rhythms",
       "type": "CREATIVE_WORK",
-      "type_note": "Classified as creative work. It is grouped inside the compact Experiments card on the homepage for visual weighting, because its scope and status are unknown; the grouping is a presentation decision and does not change the type.",
-      "status": "UNKNOWN",
+      "type_note": "Classified as creative work. It is grouped inside the compact Experiments card on the homepage for visual weighting; the grouping is a presentation decision and does not change the type.",
+      "status": "COMPLETED",
+      "status_note": "The direction later changed after the death of DJ Swice Adonis, who was the CEO. Recorded as Bobbi Andrea stated it, with no speculation about the death or its circumstances, and no inference about what happened to the project afterwards.",
       "disciplines": ["creative", "onchain-web3"],
-      "index_filter": "experiments",
+      "index_filter": "creative",
       "categories": ["music-art", "web3-onchain"],
       "role": null,
-      "summary": "A music and Web3 project.",
+      "role_note": "No formal title is claimed. The involvement below is the confirmed extent of it.",
+      "summary": "Artist outreach, music curation and marketing for On Base Rhythms.",
+      "involvement": {
+        "_note": "Confirmed by Bobbi Andrea. This list is the whole of the claim; nothing may be added to it or generalised from it.",
+        "evidence": "USER_PROVIDED",
+        "items": [
+          "helping market the idea",
+          "helping manage the idea",
+          "helping sell and pitch the idea",
+          "connecting with different types of upcoming artists",
+          "organising new-school and upcoming artists' music by genre for radio plays",
+          "organising artists' music for social-media marketing",
+          "helping develop connections with the upcoming-artist community"
+        ]
+      },
       "timeframe": { "start": null, "end": null, "precision": "unknown" },
       "links": [],
       "media": { "status": "pending" },
       "evidence": "USER_PROVIDED",
-      "visibility": "placeholder",
+      "visibility": "published",
       "caseStudy": null,
-      "must_not_claim": ["additional functionality", "status", "audience", "launch state"],
-      "confirmation_required": [
-        "What it is: a release, a series, a platform, a collective or an event",
-        "Status and whether anything launched",
-        "Timeframe",
-        "Relationship, if any, to New School Rhythmz",
-        "Any link"
+      "must_not_claim": [
+        "that Bobbi Andrea founded On Base Rhythms",
+        "that he owned it",
+        "that he was its CEO",
+        "that he was its sole manager",
+        "that he created the entire movement",
+        "that he personally represented every artist",
+        "any formal executive title",
+        "audience or reach figures",
+        "anything about the circumstances of DJ Swice Adonis's death"
       ],
-      "notes": "Associated with Bobbi Andrea. Functionality and status are explicitly not to be inferred from the name."
+      "confirmation_required": [
+        "Timeframe",
+        "Any link or asset",
+        "Whether the project continued in any form after the change of direction"
+      ],
+      "notes": "A distinct creative-work entry, kept in the portfolio despite being historical and despite the change of direction. The involvement list is the confirmed scope and is not to be expanded. DJ Swice Adonis is named only as the CEO whose death preceded the change of direction, in Bobbi Andrea's own framing."
     },
     {
       "slug": "new-school-rhythmz",
       "title": "New School Rhythmz",
       "type": "CREATIVE_WORK",
-      "status": "UNKNOWN",
+      "status": "CURRENT",
       "disciplines": ["creative", "onchain-web3"],
       "index_filter": "creative",
       "categories": ["music-art", "web3-onchain"],
       "role": null,
-      "summary": "A music and creative project, with associated live and onchain music activity.",
-      "timeframe": { "start": null, "end": null, "precision": "unknown" },
-      "known_references": [
-        {
-          "reference": "New School Rhythmz 443",
-          "description": "A live onchain music event.",
-          "evidence": "USER_PROVIDED",
-          "confirmation_required": ["Date", "Location or platform", "Bobbi Andrea's role in it", "Whether it should be its own portfolio entry or remain a reference within this one"]
-        }
-      ],
-      "naming_ambiguity": {
-        "_note": "Two spellings are in play and must not be silently merged. The music project is recorded as 'New School Rhythmz' with a z. The Managing Director role is recorded as 'New School Rhythms' with an s, in trajectory.json. They may or may not be the same entity; the distinction is preserved until confirmed.",
-        "evidence": "UNCERTAIN",
-        "status": "unresolved"
+      "summary": "An in-development game exploring a continuation of the New School Rhythms movement and bringing artists onchain.",
+      "timeframe": { "start": null, "end": null, "precision": "unknown", "note": "Still being worked on. No start date supplied and none may be invented." },
+      "name_distinction": {
+        "_note": "RESOLVED. New School Rhythmz, with a z, is this game. New School Rhythms, with an s, is a separate radio show and movement at which Bobbi Andrea was Managing Director, recorded in trajectory.json. They are two different things and must never be merged, and 'Rhythmz' must never be normalised to 'Rhythms'. This is no longer an unresolved naming ambiguity.",
+        "evidence": "USER_PROVIDED",
+        "status": "resolved"
       },
       "links": [],
       "media": { "status": "pending" },
       "evidence": "USER_PROVIDED",
       "visibility": "published",
       "caseStudy": null,
-      "must_not_claim": ["additional facts beyond those supplied", "that it is the same entity as New School Rhythms"],
-      "confirmation_required": [
-        "Whether 'New School Rhythmz' and 'New School Rhythms' are the same entity",
-        "What it is: label, collective, brand, release series or event series",
-        "Details of the New School Rhythmz 443 event",
-        "Any link"
+      "must_not_claim": [
+        "that the game is finished",
+        "that it has launched",
+        "that it has users",
+        "that it has generated revenue",
+        "that artists have already onboarded through it",
+        "that it is commercially deployed",
+        "adoption, funding, partnership or performance figures",
+        "that it is the same entity as New School Rhythms"
       ],
-      "notes": "Not to be merged with the other music projects. The spelling distinction against the Managing Director role remains the most likely source of an accidental factual error and is deliberately preserved."
+      "confirmation_required": [
+        "Stage of development, and whether any build may be shown",
+        "Timeframe",
+        "Any link or asset",
+        "Its relationship, if any, to the New School Rhythmz 443 event"
+      ],
+      "notes": "A game, in development, intended as a continuation of the New School Rhythms movement as a Base-related project with the aim of bringing artists onchain. Purpose and status are supplied; nothing about completion, launch, adoption or onboarding may be added."
+    },
+    {
+      "slug": "new-school-rhythmz-443",
+      "title": "New School Rhythmz 443",
+      "type": "CREATIVE_WORK",
+      "status": "CREATIVE",
+      "disciplines": ["creative", "onchain-web3"],
+      "index_filter": "creative",
+      "categories": ["music-art", "web3-onchain"],
+      "role": null,
+      "summary": "A live onchain music event.",
+      "timeframe": { "start": null, "end": null, "precision": "unknown" },
+      "links": [],
+      "media": { "status": "pending" },
+      "evidence": "USER_PROVIDED",
+      "visibility": "published",
+      "caseStudy": null,
+      "must_not_claim": ["attendance figures", "that it is the game", "that it is the radio show and movement"],
+      "confirmation_required": [
+        "Date",
+        "Location or platform",
+        "Bobbi Andrea's role in it",
+        "Its relationship, if any, to the New School Rhythmz game"
+      ],
+      "notes": "Promoted to its own entry now that New School Rhythmz is confirmed as a game: an event and a game are different things, so 443 is recorded separately rather than folded into either. Whether the two are related has not been stated and is not inferred."
     },
     {
       "slug": "black-circle",
@@ -629,26 +678,24 @@
     },
     {
       "slug": "dc-radio-blockchain-ai-show",
-      "title": "Blockchain & AI radio show — DC Radio",
+      "title": "EthZambezi Blockchain & AI Show — DC Radio",
       "type": "MEDIA",
       "status": "COMPLETED",
       "disciplines": ["creative", "onchain-web3"],
       "index_filter": "media",
       "categories": ["radio-media", "web3-onchain", "software-ai"],
-      "role": null,
-      "summary": "Blockchain and AI radio show experience at DC Radio, for approximately one month in 2024.",
-      "display_title_rule": "Use 'Blockchain & AI radio show — DC Radio' until the exact show title and role are confirmed. This neutral formulation is the approved wording, not a placeholder to be replaced by a guess.",
-      "approved_record_wording": "Blockchain & AI radio show at DC Radio — approximately one month in 2024; exact title and role wording pending confirmation.",
-      "timeframe": {
-        "start": "2024",
-        "end": "2024",
-        "precision": "approx",
-        "note": "Approximately one month during 2024. Specific month not established."
+      "role": "One of the hosts",
+      "role_evidence": "USER_PROVIDED",
+      "summary": "One of the hosts of the EthZambezi Blockchain & AI Show on DC Radio, April–May 2024.",
+      "title_confirmed": {
+        "_note": "The show title is confirmed as 'EthZambezi Blockchain & AI Show'. The earlier neutral formulation 'Blockchain & AI radio show — DC Radio' and the shorter 'Blockchain & AI Show' variant are superseded and must not be reintroduced as alternatives.",
+        "evidence": "USER_PROVIDED"
       },
-      "title_variants": {
-        "_note": "Two formulations appear in previous material: 'Blockchain & AI Show' and 'EthZambezi Blockchain & AI Show'. Neither is confirmed and neither may be chosen as though verified.",
-        "candidates": ["Blockchain & AI Show", "EthZambezi Blockchain & AI Show"],
-        "evidence": "UNCERTAIN"
+      "timeframe": {
+        "start": "2024-04",
+        "end": "2024-05",
+        "precision": "exact_months",
+        "note": "April–May 2024, confirmed. Exact days are not supplied and must not be invented, and the period must not be extended beyond April–May 2024. An earlier description gave the duration as approximately one month; the confirmed period is the wording to publish."
       },
       "links": [],
       "media": { "status": "pending" },
@@ -656,23 +703,24 @@
       "visibility": "published",
       "caseStudy": null,
       "must_not_claim": [
-        "ownership of DC Radio",
-        "ownership of the radio station",
+        "sole host",
+        "creator of the show",
+        "owner of the show",
+        "ownership of DC Radio or the radio station",
         "the title Founder",
         "the title Executive Producer",
         "that it is a personal company or project",
-        "any invented role: host, presenter, contributor, producer, guest or otherwise",
+        "an exact day within the period",
+        "any period beyond April–May 2024",
         "audience figures",
         "episode counts"
       ],
       "confirmation_required": [
-        "Exact show title",
-        "Exact role wording",
-        "Specific dates within 2024",
         "Station URL and correct station wording",
-        "Any episode links, recordings or promotional material"
+        "Any episode links, recordings or promotional material",
+        "Names of co-hosts, and whether they may be credited"
       ],
-      "notes": "This is the media experience to represent, replacing an incorrect earlier attribution recorded in excluded.json. Important to the narrative because it connects the earlier radio and media background with the later blockchain and AI work. Real portfolio material, but the role must not be overstated."
+      "notes": "The media experience to represent, replacing an incorrect earlier attribution recorded in excluded.json. Title, role and period are now confirmed: one of the hosts, not the sole host, and not the creator or owner. Important to the narrative because it connects the earlier radio and media background with the later blockchain and AI work."
     },
     {
       "slug": "web3-artist-onboarding",

@@ -47,7 +47,7 @@
         "future generated content"
       ],
       "origin": "Earlier research incorrectly attributed a relationship between Bobbi Andrea and this podcast. The attribution was wrong and has been withdrawn. Bobbi Andrea does not claim ownership and does not have the level of relationship with it required for it to appear as his work.",
-      "replacement": "The media experience to represent instead is 'Blockchain & AI radio show — DC Radio', recorded as dc-radio-blockchain-ai-show in work.json.",
+      "replacement": "The media experience to represent instead is the EthZambezi Blockchain & AI Show on DC Radio, April–May 2024, where Bobbi Andrea was one of the hosts. Recorded as dc-radio-blockchain-ai-show in work.json.",
       "instruction": "Do not include The Slim Podcast anywhere in portfolio-facing content, in any section, in any capacity, including as a mention or a link. It exists only in this exclusion record so that it cannot accidentally be reintroduced later. If it resurfaces in a future search result, treat this entry as authoritative and do not re-add it.",
       "repository_status": "No reference to The Slim Podcast exists anywhere in this repository's files. Verified by search. Nothing needed removing; this record is preventative."
     }
@@ -244,7 +244,7 @@
       "Respect prefers-reduced-motion, keyboard navigation, touch navigation, semantic HTML, responsive design, graceful WebGL failure and performance.",
       "Use clean URLs at /work/, /work/swice/, /work/bcsa/, /archive/bcsa-report/ and /about/, with /report.html redirecting to the archive.",
       "Do not create the later project pages (/work/crypto-4-nilubilo/, /work/music/, /work/dc-radio/, /work/design/, /work/experiments/) until their content is sufficiently known.",
-      "Use 'Blockchain & AI radio show — DC Radio' as the neutral display formulation until the exact title and role are confirmed."
+      "Publish the DC Radio work as the EthZambezi Blockchain & AI Show, April–May 2024, with Bobbi Andrea as one of the hosts. The earlier neutral formulation is superseded."
     ]
   }
 }
