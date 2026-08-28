@@ -1,0 +1,17 @@
+{
+  "name": "Bobbi Andrea portfolio",
+  "install": "npx -y live-server --version",
+  "terminals": [
+    {
+      "name": "dev server",
+      "command": "npm start",
+      "description": "Static dev server on http://localhost:3000 (live-server with live reload). Serves the zero-build site from the repository root."
+    }
+  ],
+  "ports": [
+    {
+      "name": "web",
+      "port": 3000
+    }
+  ]
+}
