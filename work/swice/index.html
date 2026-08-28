@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SWICE — a personal AI OS · Bobbi Andrea</title>
+  <meta name="description"
+    content="SWICE is Bobbi Andrea's personal AI OS with a deterministic financial execution subsystem. In development, not publicly available, with no live trading. A case study about architecture, testing and failure handling.">
+  <meta name="theme-color" content="#0A0B0D">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="SWICE — a personal AI OS · Bobbi Andrea">
+  <meta property="og:description"
+    content="A personal AI OS with a deterministic financial execution subsystem. In development; not publicly available; no live trading.">
+  <meta property="og:image" content="/public/og/bobbi-andrea.png">
+  <link rel="icon" type="image/svg+xml" href="/public/favicon.svg">
+  <link rel="stylesheet" href="/src/styles.css">
+  <script>
+    (function (d) {
+      var h = d.documentElement;
+      h.classList.add('js');
+      setTimeout(function () {
+        if (!h.hasAttribute('data-enhanced')) h.classList.remove('js');
+      }, 1500);
+    })(document);
+  </script>
+  <script defer src="/src/main.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="wordmark" href="/">Bobbi Andrea<span>Multidisciplinary practice</span></a>
+    <nav class="nav-group" aria-label="Primary">
+      <a class="btn-pill" href="/work/">Work</a>
+      <a class="btn-pill" href="/about/">About</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="section-dark">
+      <div class="container">
+        <p class="label">Case study &middot; Current build</p>
+        <h1 class="section-title" style="margin-bottom: 1.5rem;">SWICE</h1>
+        <p class="lead" style="max-width: 46ch; color: var(--dark-text);">
+          A personal AI OS with a deterministic financial execution subsystem.
+        </p>
+        <p style="max-width: 62ch; margin-top: 1.5rem;">
+          Trading is one capability of the system, not the reason it exists. The assistant and reasoning side and
+          the execution side are built as parts of the same operating environment.
+        </p>
+
+        <dl class="kv-grid" style="margin-top: var(--sp-lg);">
+          <dt>Type</dt>
+          <dd>Current build</dd>
+          <dt>Status</dt>
+          <dd>In development</dd>
+          <dt>Availability</dt>
+          <dd>Not publicly available</dd>
+          <dt>Trading</dt>
+          <dd>No live trading. Execution work has been developed and tested in paper mode.</dd>
+          <dt>Discipline</dt>
+          <dd>Software &amp; AI</dd>
+          <dt>Timeline</dt>
+          <dd><span class="tk">Date not supplied</span></dd>
+        </dl>
+      </div>
+    </section>
+
+    <section>
+      <div class="container container-narrow prose">
+        <h2 class="section-title" style="font-size: 2rem;">What it is</h2>
+        <p>
+          SWICE is a personal AI OS: an environment where an assistant layer, a reasoning layer and an execution
+          layer operate together rather than as separate tools. The financial execution subsystem is one part of
+          that environment. It is deterministic by design, which is the interesting engineering problem &mdash;
+          an assistant can be probabilistic, but anything that executes needs to behave the same way every time
+          given the same inputs.
+        </p>
+        <p>
+          It is built as a personal system rather than a product. That framing is deliberate, and it shapes what
+          the work optimises for: correctness, predictable behaviour, and knowing what the system does when
+          something fails.
+        </p>
+
+        <h2 class="section-title" style="font-size: 2rem; margin-top: 3.5rem;">Engineering approach</h2>
+        <p>
+          The work to date has been about architecture and engineering practice rather than features. The parts
+          that matter:
+        </p>
+        <ul>
+          <li><strong>Deterministic execution.</strong> Execution paths are designed so that the same inputs
+            produce the same decisions, separating the parts that may reason from the parts that must not
+            improvise.</li>
+          <li><strong>Paper mode first.</strong> The execution subsystem has been developed and exercised in
+            paper mode, without live funds.</li>
+          <li><strong>Shadow-mode thinking.</strong> Running logic alongside reality to observe what it would
+            have done, rather than letting it act while confidence is still being built.</li>
+          <li><strong>Transaction simulation.</strong> Simulating what a transaction would do before treating
+            execution as safe.</li>
+          <li><strong>Failure handling and fallback.</strong> Assuming that data sources, models and networks
+            fail, and deciding in advance what the system does when they do.</li>
+          <li><strong>Testing as a design constraint.</strong> The system is built to be testable, and behaviour
+            is verified rather than assumed.</li>
+        </ul>
+
+        <h2 class="section-title" style="font-size: 2rem; margin-top: 3.5rem;">Where it sits in the trajectory</h2>
+        <p>
+          SWICE is where the earlier work converges rather than where it stops. The onchain and community years
+          are what made the execution side legible; the design and media background is why interface and
+          explanation matter to me; and the assistant work is a continuation of a long-running interest in
+          building tools rather than only using them.
+        </p>
+
+        <div class="note-panel">
+          <h3>What is not being claimed</h3>
+          <p>Stated explicitly, because a project that touches financial execution invites assumptions:</p>
+          <ul>
+            <li>No live trading, and no real-money user activity.</li>
+            <li>Not in production, and not commercially deployed.</li>
+            <li>No users, revenue, funding, partnerships or adoption.</li>
+            <li>No security audit, security guarantee, or performance guarantee.</li>
+            <li>No investment returns or profitability of any kind.</li>
+            <li>Not publicly available. It is in development &mdash; which is different from &ldquo;coming
+              soon&rdquo;.</li>
+          </ul>
+        </div>
+
+        <div class="note-panel">
+          <h3>What this case study leaves out</h3>
+          <p>
+            Internal architecture names, infrastructure detail, providers, configuration and implementation
+            specifics are deliberately not published. Internal engineering milestones are development facts
+            rather than public claims, so they are not presented here as achievements. A fuller technical write-up
+            may follow once it is clear what is appropriate to disclose.
+          </p>
+        </div>
+
+        <p style="margin-top: 2.5rem;">
+          <a class="btn-pill" href="/work/">&larr; All work</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="grid">
+        <div class="col-6">
+          <h2 style="font-size: 1.35rem; margin-bottom: 0.5rem;">Bobbi Andrea</h2>
+          <p class="footer-header">Multidisciplinary creative, technologist and builder</p>
+          <p>Music and songwriting, graphic design, radio and media, onchain and community work, software and AI.
+            Based in Zambia.</p>
+        </div>
+        <div class="col-6">
+          <p class="footer-header">Site</p>
+          <div class="footer-links">
+            <a class="footer-link" href="/">Home</a>
+            <a class="footer-link" href="/work/">Work index</a>
+            <a class="footer-link" href="/about/">About &amp; full trajectory</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-base">
+        <span>&copy; 2026 Bobbi Andrea</span>
+        <span>Portfolio in progress &mdash; content being verified</span>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

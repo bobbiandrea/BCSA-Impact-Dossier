@@ -1,6 +1,12 @@
 [build]
   publish = "."
 
+[[redirects]]
+  from = "/report.html"
+  to = "/archive/bcsa-report/"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]
@@ -9,8 +15,10 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
+# Assets are referenced from the repository root, so the cache rules must
+# match the paths actually requested by the pages.
 [[headers]]
-  for = "/images/*"
+  for = "/public/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
@@ -21,5 +29,10 @@
 
 [[headers]]
   for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/content/*"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"

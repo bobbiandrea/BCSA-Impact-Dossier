@@ -1,0 +1,282 @@
+{
+  "_meta": {
+    "title": "Bobbi Andrea — professional and creative trajectory",
+    "purpose": "Employment, roles and positions held, kept separate from projects and creative work so that employment is never flattened into project cards. Not rendered by any page.",
+    "compiled": "2026-08-14",
+    "revision": 2,
+    "primary_source": "CV and professional history supplied in the master Cursor command (2026-08-14). None of this appears anywhere in this repository.",
+    "cv_authority_rule": "The CV is primary source material. A role is not omitted, downgraded or doubted because it cannot be found in this repository, on X, on GitHub or in a search engine. Roles that are less visually impressive are not dropped.",
+    "rendering_rules": [
+      "Group by year rather than drawing a single continuous timeline.",
+      "Do not fabricate continuity between jobs. Gaps remain gaps.",
+      "Do not create a decorative continuous spine that falsely implies uninterrupted employment.",
+      "Show approximate dates as visibly approximate. Where dates are missing, present them non-misleadingly — 'date not supplied' rather than an inferred range.",
+      "Use past tense for historical roles; do not present historical radio work as current employment."
+    ]
+  },
+  "_schema": {
+    "slug": "url-safe identifier",
+    "organisation": "employer or organisation exactly as supplied; null where deliberately unspecified",
+    "role": "job title exactly as supplied; null where not yet confirmed",
+    "type": "EMPLOYMENT | ROLE | MEDIA | COMMUNITY",
+    "tense": "historical | current | unresolved",
+    "start / end": "YYYY or YYYY-MM; precision is exact | exact_years (year range confirmed, months not supplied) | exact_months (month range confirmed, days not supplied) | approx | unknown",
+    "disciplines": "practice areas, as in work.json",
+    "evidence": "as defined in work.json",
+    "work_ref": "related entry slug in work.json where one exists",
+    "confirmation_required": "specific open questions"
+  },
+
+  "trajectory": [
+    {
+      "slug": "nyumba-yanga-radio",
+      "organisation": "Nyumba Yanga Radio",
+      "role": "DJ",
+      "type": "EMPLOYMENT",
+      "tense": "historical",
+      "start": "2019",
+      "end": "2020",
+      "precision": "approx",
+      "disciplines": ["creative"],
+      "categories": ["radio-media", "music-art"],
+      "summary": null,
+      "evidence": "USER_PROVIDED",
+      "visibility": "published",
+      "must_not_claim": ["show names", "audience numbers", "listener figures", "achievements"],
+      "confirmation_required": [
+        "Specific months, if known",
+        "Whether the role had a show or slot name that may be published",
+        "Whether it was employment, freelance or volunteer",
+        "Station URL"
+      ],
+      "notes": "Earliest role in the supplied history, and the start of the radio and media thread that later leads to the DC Radio blockchain and AI show. Classified as employment and media role."
+    },
+    {
+      "slug": "dinda-signs-solutions",
+      "organisation": "Dinda Signs Solutions",
+      "role": "Graphic Designer",
+      "type": "EMPLOYMENT",
+      "tense": "historical",
+      "start": "2021-01",
+      "end": "2022-03",
+      "precision": "exact",
+      "disciplines": ["creative"],
+      "categories": ["graphic-design", "employment-roles"],
+      "summary": null,
+      "evidence": "USER_PROVIDED",
+      "visibility": "published",
+      "work_ref": "graphic-design-work",
+      "must_not_claim": ["responsibilities", "clients", "achievements", "metrics"],
+      "confirmation_required": [
+        "Responsibilities, in Bobbi's own words",
+        "Whether any work produced there may be shown",
+        "Employment type: full-time, part-time or contract"
+      ],
+      "notes": "First of three consecutive graphic-design roles. Employment, not a personal project. No responsibilities recorded because none were supplied and none may be inferred from the job title."
+    },
+    {
+      "slug": "master-signs-printers",
+      "organisation": "Master Signs Printers",
+      "role": "Graphic Designer",
+      "type": "EMPLOYMENT",
+      "tense": "historical",
+      "start": "2022-03",
+      "end": "2023-04",
+      "precision": "exact",
+      "disciplines": ["creative"],
+      "categories": ["graphic-design", "employment-roles"],
+      "summary": null,
+      "evidence": "USER_PROVIDED",
+      "visibility": "published",
+      "work_ref": "graphic-design-work",
+      "must_not_claim": ["responsibilities", "clients", "achievements", "metrics"],
+      "confirmation_required": [
+        "Responsibilities, in Bobbi's own words",
+        "Whether any work produced there may be shown",
+        "Employment type"
+      ],
+      "notes": "Longest of the three design roles at approximately thirteen months."
+    },
+    {
+      "slug": "index-printers-zambia",
+      "organisation": "Index Printers Zambia",
+      "role": "Graphic Designer",
+      "type": "EMPLOYMENT",
+      "tense": "historical",
+      "start": "2023-04",
+      "end": "2023-06",
+      "precision": "exact",
+      "disciplines": ["creative"],
+      "categories": ["graphic-design", "employment-roles"],
+      "summary": null,
+      "evidence": "USER_PROVIDED",
+      "visibility": "published",
+      "work_ref": "graphic-design-work",
+      "must_not_claim": ["responsibilities", "clients", "achievements", "metrics", "reason for leaving"],
+      "confirmation_required": [
+        "Responsibilities, in Bobbi's own words",
+        "Whether any work produced there may be shown",
+        "Employment type"
+      ],
+      "notes": "Third design role, approximately three months. Short tenure recorded as given, without explanation, because none was supplied and none may be inferred."
+    },
+    {
+      "slug": "mobile-money-agent",
+      "organisation": null,
+      "organisation_status": "intentionally unspecified — no employer information was supplied, and inventing one is forbidden",
+      "role": "Mobile Money Agent",
+      "type": "EMPLOYMENT",
+      "tense": "historical",
+      "start": "2023-10",
+      "end": "2023-11",
+      "precision": "exact",
+      "disciplines": [],
+      "categories": ["employment-roles"],
+      "summary": null,
+      "evidence": "USER_PROVIDED",
+      "visibility": "published",
+      "must_not_claim": ["employer name", "transaction volumes", "responsibilities"],
+      "confirmation_required": [],
+      "optional_additions": ["Employer or network, if Bobbi wishes it named", "Responsibilities, in his own words"],
+      "notes": "Recorded because roles are not erased for being less visually impressive. Also sits chronologically between the design career and the blockchain work, which makes it part of an honest trajectory. Renders without an employer rather than with a guessed one."
+    },
+    {
+      "slug": "dc-radio-show-role",
+      "organisation": "DC Radio",
+      "role": "One of the hosts",
+      "role_display": "Host, EthZambezi Blockchain & AI Show — DC Radio",
+      "type": "MEDIA",
+      "tense": "historical",
+      "start": "2024-04",
+      "end": "2024-05",
+      "precision": "exact_months",
+      "duration_note": "April–May 2024, confirmed. Exact days are not supplied and the period must not be extended.",
+      "disciplines": ["creative", "onchain-web3"],
+      "categories": ["radio-media", "web3-onchain", "software-ai"],
+      "summary": "One of the hosts of the EthZambezi Blockchain & AI Show on DC Radio, April–May 2024.",
+      "evidence": "USER_PROVIDED",
+      "visibility": "published",
+      "work_ref": "dc-radio-blockchain-ai-show",
+      "must_not_claim": [
+        "sole host",
+        "creator or owner of the show",
+        "ownership of DC Radio or the station",
+        "the title Founder",
+        "the title Executive Producer",
+        "an exact day, or any period beyond April–May 2024"
+      ],
+      "confirmation_required": [
+        "Station wording and URL",
+        "Any episode links or recordings"
+      ],
+      "notes": "The bridge between the radio and media background and the blockchain and AI work. Title, role and period are confirmed: one of the hosts, April–May 2024. He is not the sole host and not the creator or owner."
+    },
+    {
+      "slug": "new-school-rhythms-md",
+      "organisation": "New School Rhythms",
+      "organisation_description": "A radio show and movement.",
+      "role": "Managing Director",
+      "type": "EMPLOYMENT",
+      "tense": "unresolved",
+      "start": null,
+      "end": null,
+      "precision": "unknown",
+      "disciplines": ["creative"],
+      "categories": ["music-art", "employment-roles"],
+      "summary": null,
+      "evidence": "USER_PROVIDED",
+      "visibility": "published",
+      "work_ref": "new-school-rhythmz",
+      "must_not_claim": ["dates", "that it is the same entity as New School Rhythmz 443"],
+      "confirmation_required": [
+        "Start and end dates — no dates were supplied and none may be invented",
+        "Responsibilities, in Bobbi's own words",
+        "Whether the role is current or historical"
+      ],
+      "notes": "A radio show and movement, recorded with the 's' spelling. Confirmed as a different thing from New School Rhythmz 443, which is the in-development project; the two must never be merged and the 'z' spelling must never be normalised. The name is not a typo. Dates render as 'date not supplied' rather than approximate, because no date was given at all."
+    },
+    {
+      "slug": "bcsa-leadership",
+      "organisation": "Based Creators Southern Africa (BCSA)",
+      "role": "Regional President, Southern African Region",
+      "type": "ROLE",
+      "tense": "historical",
+      "start": "2025",
+      "end": "2026",
+      "precision": "exact_years",
+      "disciplines": ["community-ecosystem", "onchain-web3"],
+      "categories": ["community-ecosystem", "web3-onchain"],
+      "summary": "Served as Regional President, Southern African Region, at Based Creators Southern Africa.",
+      "evidence": "USER_PROVIDED",
+      "visibility": "published",
+      "work_ref": "bcsa",
+      "must_not_claim": [
+        "that BCSA is his current organisation",
+        "that he is its current president",
+        "that the role is ongoing"
+      ],
+      "confirmation_required": [
+        "Exact start and end dates within the confirmed 2025–2026 period",
+        "Whether the role was voluntary or compensated, and whether that should be stated"
+      ],
+      "notes": "Historical role only, for the confirmed 2025–2026 period. The official title is confirmed as Regional President, Southern African Region, and is used in full rather than shortened to President. The words 'Southern African Region' are part of the office title and must not be republished as a geographic footprint claim. Recorded as a role rather than employment. Treated as community, ecosystem and leadership experience, not as a personal startup."
+    },
+    {
+      "slug": "base-zambia-involvement",
+      "organisation": "Base Zambia",
+      "role": "Volunteer / moderator",
+      "type": "COMMUNITY",
+      "tense": "current",
+      "start": null,
+      "end": null,
+      "precision": "unknown",
+      "date_presentation": "date not supplied",
+      "disciplines": ["community-ecosystem", "onchain-web3"],
+      "categories": ["community-ecosystem", "web3-onchain"],
+      "summary": "Volunteer and moderator involvement with the Base Zambia community.",
+      "evidence": "USER_PROVIDED",
+      "visibility": "published",
+      "work_ref": "base-zambia",
+      "must_not_claim": [
+        "founder",
+        "executive",
+        "employee",
+        "owner",
+        "official Base employee",
+        "any leadership position beyond volunteer / moderator",
+        "ownership of Base Zambia or of Base",
+        "that it is a project he founded"
+      ],
+      "confirmation_required": [],
+      "optional_additions": ["A timeframe, if Bobbi wishes one shown"],
+      "notes": "Role confirmed as volunteer and moderator, and confirmed current though undated. A community role and relationship, not a project and not ownership. Renders without dates rather than with a guessed period. Must not be conflated with BCSA or with Bobbi's own projects."
+    }
+  ],
+
+  "unaccounted_periods": {
+    "_note": "Recorded so the timeline never implies continuous activity, and so these can be filled from the full CV rather than guessed at. A gap means 'not yet supplied', not 'nothing happened'. Gaps are to remain visible gaps.",
+    "periods": [
+      { "from": "before 2019", "to": "2019", "note": "Nothing supplied. Music activity predates the employment record but no start year was given in this command." },
+      { "from": "2020", "to": "2021-01", "note": "Between the Nyumba Yanga Radio role and the first design role." },
+      { "from": "2023-06", "to": "2023-10", "note": "Between the last design role and the mobile money agent role." },
+      { "from": "2023-11", "to": "2024", "note": "Between the mobile money agent role and the DC Radio show." },
+      { "from": "2024", "to": "2025-10", "note": "Between the DC Radio show and the BCSA period. Web3 and ecosystem activity may fall here, but no dates were supplied." },
+      { "from": "2026", "to": "present", "note": "SWICE development period not established. The BCSA Impact Dossier in this repository was built in May 2026." }
+    ],
+    "undated_entries": [
+      "New School Rhythms — Managing Director",
+      "Base Zambia — volunteer / moderator",
+      "Crypto_4_Nilubilo",
+      "LANDENI, JAMS, On Base Rhythms, New School Rhythmz 443, Black Circle",
+      "Bobbi Andrea music",
+      "SWICE"
+    ]
+  },
+
+  "open_questions": [
+    "Is there a complete CV document that can be supplied, so gaps are filled from record rather than reconstructed?",
+    "Are there roles, education or training not mentioned in the supplied history at all?",
+    "Should volunteer versus paid status be visible anywhere?",
+    "Which roles belong on the homepage trajectory versus only in the fuller CV at /about/?"
+  ]
+}

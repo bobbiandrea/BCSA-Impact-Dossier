@@ -1,370 +1,272 @@
 /**
- * BCSA x QUANTUM - Main Logic 2025
- * Includes: Dither Shader, Scroll Reveal, Lightbox, Counter
+ * Bobbi Andrea — portfolio interaction layer.
+ *
+ * Everything here is an enhancement. No content depends on this file running:
+ * the `js` class that hides revealed sections is added by an inline snippet in
+ * each page head and removed again below if this script cannot do its job.
  */
+(function () {
+  'use strict';
 
-document.addEventListener('DOMContentLoaded', () => {
+  var root = document.documentElement;
 
-  /* ── ARCHITECTURAL WEBGL FUSION (HERO) ────────────────────── */
-  const config = {
-    colors: {
-      bg: 0xF8FAFC,
-      left: 0x0052FF, // Base Blue
-      right: 0x0A0B0D // Corporate Black
-    },
-    particles: {
-      count: 10000,
-      size: 0.015
+  // Tell the inline head snippet that enhancement arrived, so its fail-open
+  // timer stands down. Set before any other work so a later throw cannot
+  // leave content hidden.
+  root.setAttribute('data-enhanced', 'true');
+
+  var reduceMotion = window.matchMedia
+    ? window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    : false;
+
+  /* ── SAFETY NET ───────────────────────────────────────
+     If anything below throws, drop the `js` class so every
+     reveal-hidden section becomes visible again. */
+  function failOpen(err) {
+    root.classList.remove('js');
+    if (window.console && console.warn) {
+      console.warn('Enhancement failed; content shown unstyled by animation.', err);
     }
-  };
+  }
 
-  function createScene(containerId, colorHex, geometryType) {
-    const container = document.getElementById(containerId);
-    if (!container) return null;
+  /* ── SCROLL REVEAL ────────────────────────────────── */
+  function initReveal() {
+    var items = document.querySelectorAll('.reveal');
+    if (!items.length) return;
 
-    // WebGL Support Check
+    if (!('IntersectionObserver' in window) || reduceMotion) {
+      for (var i = 0; i < items.length; i++) items[i].classList.add('visible');
+      return;
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    for (var j = 0; j < items.length; j++) observer.observe(items[j]);
+  }
+
+  /* ── WORK INDEX FILTERS ───────────────────────────────
+     Progressive enhancement over markup that already lists
+     every row. With JS off, all rows stay visible. */
+  function initFilters() {
+    var bar = document.querySelector('[data-filter-bar]');
+    if (!bar) return;
+
+    var buttons = bar.querySelectorAll('[data-filter]');
+    var rows = document.querySelectorAll('[data-discipline]');
+    if (!buttons.length || !rows.length) return;
+
+    function apply(value) {
+      for (var i = 0; i < rows.length; i++) {
+        var row = rows[i];
+        var match = value === 'all' || row.getAttribute('data-discipline') === value;
+        if (match) {
+          row.removeAttribute('hidden');
+        } else {
+          row.setAttribute('hidden', '');
+        }
+      }
+      for (var j = 0; j < buttons.length; j++) {
+        var isActive = buttons[j].getAttribute('data-filter') === value;
+        buttons[j].setAttribute('aria-pressed', isActive ? 'true' : 'false');
+      }
+      var count = document.querySelector('[data-filter-count]');
+      if (count) {
+        var shown = 0;
+        for (var k = 0; k < rows.length; k++) {
+          if (!rows[k].hasAttribute('hidden')) shown++;
+        }
+        count.textContent = shown + ' of ' + rows.length + ' shown';
+      }
+    }
+
+    for (var b = 0; b < buttons.length; b++) {
+      buttons[b].addEventListener('click', function (event) {
+        apply(event.currentTarget.getAttribute('data-filter'));
+      });
+    }
+
+    apply('all');
+  }
+
+  /* ── HERO WEBGL ───────────────────────────────────────
+     Purely atmospheric. Skipped entirely when Three.js is
+     unavailable, when WebGL is unsupported, or when reduced
+     motion is requested. Paused while off-screen. */
+  function initHeroScenes() {
+    var containers = document.querySelectorAll('[data-hero-canvas]');
+    if (!containers.length) return;
+
+    if (typeof THREE === 'undefined') return;
+
+    if (!hasWebGL()) {
+      for (var f = 0; f < containers.length; f++) {
+        containers[f].innerHTML =
+          '<p class="webgl-fallback">Atmospheric visual unavailable: WebGL not supported.</p>';
+      }
+      return;
+    }
+
+    var scenes = [];
+    for (var i = 0; i < containers.length; i++) {
+      var scene = buildScene(containers[i]);
+      if (scene) scenes.push(scene);
+    }
+    if (!scenes.length) return;
+
+    if (reduceMotion) {
+      scenes.forEach(function (s) { s.renderer.render(s.scene, s.camera); });
+      return;
+    }
+
+    var running = true;
+    var clock = new THREE.Clock();
+
+    function frame() {
+      if (!running) return;
+      window.requestAnimationFrame(frame);
+      var t = clock.getElapsedTime();
+      scenes.forEach(function (s) {
+        s.points.rotation.y = t * s.speed;
+        s.points.rotation.x = t * s.speed * 0.4;
+        s.renderer.render(s.scene, s.camera);
+      });
+    }
+    frame();
+
+    // Pause when the hero leaves the viewport.
+    var hero = document.querySelector('[data-hero]');
+    if (hero && 'IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) {
+        var visible = entries[0].isIntersecting;
+        if (visible && !running) {
+          running = true;
+          frame();
+        } else if (!visible) {
+          running = false;
+        }
+      }, { threshold: 0 }).observe(hero);
+    }
+
+    window.addEventListener('resize', function () {
+      scenes.forEach(function (s) {
+        var w = s.container.clientWidth;
+        var h = s.container.clientHeight;
+        if (!w || !h) return;
+        s.renderer.setSize(w, h);
+        s.camera.aspect = w / h;
+        s.camera.updateProjectionMatrix();
+      });
+    });
+
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) {
+        running = false;
+      } else if (!running) {
+        running = true;
+        frame();
+      }
+    });
+  }
+
+  function hasWebGL() {
     try {
-      const canvas = document.createElement('canvas');
-      const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
-      if (!gl) throw new Error('WebGL not supported');
+      var canvas = document.createElement('canvas');
+      return !!(canvas.getContext('webgl') || canvas.getContext('experimental-webgl'));
     } catch (e) {
-      container.innerHTML = '<div style="padding:2rem; font-size:0.7rem; font-family:var(--font-mono); color:var(--text-muted);">WEBGL_REQUIRED_FOR_VISUALIZATION</div>';
-      return null;
+      return false;
     }
-    
-    const width = container.clientWidth;
-    const height = container.clientHeight;
+  }
 
-    const scene = new THREE.Scene();
-    // scene.fog = new THREE.FogExp2(config.colors.bg, 0.15);
+  function buildScene(container) {
+    var width = container.clientWidth;
+    var height = container.clientHeight;
+    if (!width || !height) return null;
 
-    const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 100);
+    var colour = container.getAttribute('data-colour') || '#0A0B0D';
+    var form = container.getAttribute('data-form') || 'field';
+
+    var scene = new THREE.Scene();
+    var camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 100);
     camera.position.z = 4.5;
 
-    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+    var renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
     renderer.setSize(width, height);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     container.appendChild(renderer.domElement);
 
-    let geometry;
-    if (geometryType === 'structured') {
-      geometry = new THREE.TorusKnotGeometry(1.2, 0.4, 200, 32, 2, 3);
+    var geometry;
+    if (form === 'structured') {
+      var source = new THREE.TorusKnotGeometry(1.25, 0.4, 180, 28, 2, 3);
+      geometry = new THREE.BufferGeometry();
+      geometry.setAttribute('position', source.getAttribute('position'));
     } else {
       geometry = new THREE.BufferGeometry();
-      // Performance Hardening: Reduce particles on small screens
-      const particleCount = window.innerWidth < 768 ? Math.floor(config.particles.count * 0.4) : config.particles.count;
-      const positions = new Float32Array(particleCount * 3);
-      for (let i = 0; i < particleCount * 3; i += 3) {
-        const u = Math.random();
-        const v = Math.random();
-        const theta = 2 * Math.PI * u;
-        const phi = Math.acos(2 * v - 1);
-        const r = 1.8 * Math.cbrt(Math.random());
-        const offset = i % 2 === 0 ? 0.6 : -0.6;
-        positions[i] = r * Math.sin(phi) * Math.cos(theta) + offset;
+      var count = window.innerWidth < 768 ? 3200 : 8000;
+      var positions = new Float32Array(count * 3);
+      for (var i = 0; i < count * 3; i += 3) {
+        var theta = 2 * Math.PI * Math.random();
+        var phi = Math.acos(2 * Math.random() - 1);
+        var r = 1.9 * Math.cbrt(Math.random());
+        positions[i] = r * Math.sin(phi) * Math.cos(theta);
         positions[i + 1] = r * Math.sin(phi) * Math.sin(theta);
         positions[i + 2] = r * Math.cos(phi);
       }
       geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
     }
 
-    let pointGeometry;
-    if (geometryType === 'structured') {
-      const posAttribute = geometry.getAttribute('position');
-      pointGeometry = new THREE.BufferGeometry();
-      pointGeometry.setAttribute('position', posAttribute);
-    } else {
-      pointGeometry = geometry;
-    }
-
-    const material = new THREE.PointsMaterial({
-      color: colorHex,
-      size: config.particles.size,
+    var material = new THREE.PointsMaterial({
+      color: new THREE.Color(colour),
+      size: 0.015,
       transparent: true,
-      opacity: 0.3,
+      opacity: 0.32,
       sizeAttenuation: true
     });
 
-    const points = new THREE.Points(pointGeometry, material);
+    var points = new THREE.Points(geometry, material);
     points.rotation.x = Math.random() * Math.PI;
     points.rotation.y = Math.random() * Math.PI;
     scene.add(points);
 
-    return { scene, camera, renderer, points, container };
-  }
-
-  const sceneLeft = createScene('canvas-left', config.colors.left, 'structured');
-  const sceneRight = createScene('canvas-right', config.colors.right, 'dynamic');
-  const sceneEcosystem = createEcosystemMap('webgl-ecosystem-map', 0x0052FF, 4000);
-  
-  const clock = new THREE.Clock();
-
-  function animate() {
-    requestAnimationFrame(animate);
-    const elapsedTime = clock.getElapsedTime();
-    
-    if (sceneLeft) {
-      sceneLeft.points.rotation.y = elapsedTime * 0.05;
-      sceneLeft.points.rotation.x = elapsedTime * 0.025;
-      sceneLeft.renderer.render(sceneLeft.scene, sceneLeft.camera);
-    }
-    
-    if (sceneRight) {
-      sceneRight.points.rotation.y = elapsedTime * -0.06;
-      sceneRight.points.rotation.z = Math.sin(elapsedTime * 0.1) * 0.2;
-      sceneRight.renderer.render(sceneRight.scene, sceneRight.camera);
-    }
-  }
-
-  animate();
-
-  window.addEventListener('resize', () => {
-    [sceneLeft, sceneRight].forEach(s => {
-      if (s) {
-        const width = s.container.clientWidth;
-        const height = s.container.clientHeight;
-        s.renderer.setSize(width, height);
-        s.camera.aspect = width / height;
-        s.camera.updateProjectionMatrix();
-      }
-    });
-  });
-
-  /* ── DIGITAL INFRASTRUCTURE NETWORK ─────────────────────── */
-  // BCSA Ecosystem Map
-  function createEcosystemMap(containerId, color, count) {
-    const container = document.getElementById(containerId);
-    if (!container) return null;
-
-    // Performance Hardening: Reduce particles on small screens
-    const particleCount = window.innerWidth < 768 ? Math.floor(count * 0.4) : count;
-
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-    renderer.setSize(container.clientWidth, container.clientHeight);
-    container.appendChild(renderer.domElement);
-
-    const geometry = new THREE.BufferGeometry();
-    const vertices = [];
-    for (let i = 0; i < particleCount; i++) {
-      vertices.push((Math.random() - 0.5) * 10, (Math.random() - 0.5) * 10, (Math.random() - 0.5) * 10);
-    }
-    geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
-
-    const material = new THREE.PointsMaterial({ color: color, size: 0.1 });
-    const points = new THREE.Points(geometry, material);
-    scene.add(points);
-
-    camera.position.z = 5;
-
-    function animateMap() {
-      requestAnimationFrame(animateMap);
-      points.rotation.x += 0.001;
-      points.rotation.y += 0.002;
-      renderer.render(scene, camera);
-    }
-    animateMap();
-
-    window.addEventListener('resize', () => {
-      camera.aspect = container.clientWidth / container.clientHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(container.clientWidth, container.clientHeight);
-    });
-
-    return { scene, camera, renderer, points, container };
-  }
-
-  const netContainer = document.getElementById('webgl-canvas-network');
-  if (netContainer) {
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, netContainer.clientWidth / netContainer.clientHeight, 0.1, 1000);
-    camera.position.z = 100;
-
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-    renderer.setSize(netContainer.clientWidth, netContainer.clientHeight);
-    netContainer.appendChild(renderer.domElement);
-
-    const nodes = [];
-    const nodeGeometry = new THREE.SphereGeometry(1.2, 16, 16);
-    const nodeMaterial = new THREE.MeshBasicMaterial({ color: 0x0052FF });
-    const lineMaterial = new THREE.LineBasicMaterial({ color: 0x0052FF, transparent: true, opacity: 0.2 });
-
-    for (let i = 0; i < 8; i++) {
-      const node = new THREE.Mesh(nodeGeometry, nodeMaterial);
-      node.position.set((Math.random() - 0.5) * 120, (Math.random() - 0.5) * 80, (Math.random() - 0.5) * 40);
-      scene.add(node);
-      nodes.push(node);
-    }
-
-    const linePoints = [];
-    nodes.forEach(n1 => {
-      nodes.forEach(n2 => {
-        if (n1 !== n2 && Math.random() > 0.7) {
-          const geometry = new THREE.BufferGeometry().setFromPoints([n1.position, n2.position]);
-          const line = new THREE.Line(geometry, lineMaterial);
-          scene.add(line);
-        }
-      });
-    });
-
-    function animNet() {
-      requestAnimationFrame(animNet);
-      scene.rotation.y += 0.002;
-      renderer.render(scene, camera);
-    }
-    animNet();
-  }
-
-  /* ── SCROLL REVEAL ───────────────────────────────────── */
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-
-        // If it contains a counter, trigger it
-        entry.target.querySelectorAll('.counter, .stat-num').forEach(countUp);
-      }
-    });
-  }, { threshold: 0.15 });
-
-  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-  /* ── COUNTER LOGIC ───────────────────────────────────── */
-  function countUp(el) {
-    if (el.dataset.running) return;
-    el.dataset.running = "true";
-    el.innerText = '0';
-
-    const updateCounter = () => {
-      const target = +el.getAttribute('data-target');
-      const c = +el.innerText;
-      const increment = target / 100;
-
-      if (c < target) {
-        el.innerText = `${Math.ceil(c + increment)}`;
-        setTimeout(updateCounter, 20);
-      } else {
-        el.innerText = target;
-      }
+    return {
+      container: container,
+      scene: scene,
+      camera: camera,
+      renderer: renderer,
+      points: points,
+      speed: form === 'structured' ? 0.05 : -0.04
     };
-
-    updateCounter();
   }
 
-  /* ── LIGHTBOX ────────────────────────────────────────── */
-  const lightbox = document.getElementById('lightbox');
-  const lbImg = document.getElementById('lb-img');
-  const lbCounter = document.getElementById('lb-counter');
-  let galleryImages = [];
-  let currentIndex = 0;
-
-  window.openLightbox = function (item) {
-    const clickedImg = item.querySelector('img');
-    const allGalleryItems = document.querySelectorAll('.gallery-item img');
-    galleryImages = Array.from(allGalleryItems).map(img => img.src);
-    currentIndex = galleryImages.indexOf(clickedImg.src);
-
-    updateLightbox();
-    lightbox.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  };
-
-  window.closeLightbox = function () {
-    lightbox.classList.remove('open');
-    document.body.style.overflow = '';
-  };
-
-  window.lbNext = function () {
-    currentIndex = (currentIndex + 1) % galleryImages.length;
-    updateLightbox();
-  };
-
-  window.lbPrev = function () {
-    currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
-    updateLightbox();
-  };
-
-  function updateLightbox() {
-    lbImg.src = galleryImages[currentIndex];
-    lbCounter.innerText = `${currentIndex + 1} / ${galleryImages.length}`;
+  /* ── BOOT ─────────────────────────────────────────── */
+  function boot() {
+    try {
+      initReveal();
+      initFilters();
+      initHeroScenes();
+    } catch (err) {
+      failOpen(err);
+    }
   }
 
-  // Close on escape
-  window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeLightbox();
-    if (lightbox.classList.contains('open')) {
-      if (e.key === 'ArrowRight') lbNext();
-      if (e.key === 'ArrowLeft') lbPrev();
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+
+  // If the stylesheet hid content but this script never got far enough to
+  // reveal it, fail open once the page has finished loading.
+  window.addEventListener('load', function () {
+    var hidden = document.querySelectorAll('.reveal:not(.visible)');
+    if (hidden.length && !document.querySelector('.reveal.visible')) {
+      root.classList.remove('js');
     }
   });
-
-  /* ── COUNCIL TABS ───────────────────────────────────── */
-  window.switchTab = function (id) {
-    document.querySelectorAll('.q-tab, .q-tabs .btn-pill').forEach((tab) => {
-      tab.classList.remove('active');
-    });
-    const clickedTab = event.currentTarget;
-    if (clickedTab) clickedTab.classList.add('active');
-
-    document.querySelectorAll('.q-panel').forEach((panel) => {
-      panel.classList.remove('active');
-    });
-    const panel = document.getElementById(id);
-    if (panel) panel.classList.add('active');
-  };
-
-});
-
-/* --- ASSISTANT LOGIC --- */
-const assistantTrigger = document.getElementById('assistant-trigger');
-const assistantPanel = document.getElementById('assistant-panel');
-const assistantClose = document.getElementById('assistant-close');
-const assistantQBtns = document.querySelectorAll('.assistant-q-btn');
-const assistantAnswers = document.querySelectorAll('.assistant-answer');
-
-if (assistantTrigger && assistantPanel && assistantClose) {
-  assistantTrigger.addEventListener('click', () => {
-    assistantPanel.classList.toggle('active');
-  });
-
-  assistantClose.addEventListener('click', () => {
-    assistantPanel.classList.remove('active');
-  });
-
-  // Close on click outside
-  document.addEventListener('click', (e) => {
-    if (!assistantPanel.contains(e.target) && !assistantTrigger.contains(e.target)) {
-      assistantPanel.classList.remove('active');
-    }
-  });
-
-  // Close on Escape
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      assistantPanel.classList.remove('active');
-    }
-  });
-
-  // Question handlers
-  assistantQBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const answerId = btn.getAttribute('data-answer');
-      const targetAnswer = document.getElementById(answerId);
-
-      // Hide others
-      assistantAnswers.forEach(ans => {
-        if (ans.id !== answerId) ans.style.display = 'none';
-      });
-
-      // Toggle current
-      if (targetAnswer.style.display === 'block') {
-        targetAnswer.style.display = 'none';
-      } else {
-        targetAnswer.style.display = 'block';
-        targetAnswer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }
-    });
-  });
-}
-
+})();
