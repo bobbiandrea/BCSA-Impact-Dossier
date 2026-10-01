@@ -1,0 +1,831 @@
+{
+  "_meta": {
+    "title": "Bobbi Andrea — work ledger",
+    "purpose": "Editorial and evidence record for the portfolio. This file is not rendered by any page. It exists so that no assumption is turned into a published biographical claim.",
+    "compiled": "2026-08-14",
+    "revision": 2,
+    "sources": [
+      "Master Cursor command — Bobbi Andrea personal portfolio (2026-08-14). Primary source for biographical and professional information.",
+      "Master brief and portfolio reconstruction command supplied by Bobbi Andrea (2026-08-14)",
+      "This repository, originally the BCSA Impact Dossier, at commit 59cdecb"
+    ],
+    "authority_rule": "For biographical and professional information the supplied commands are primary. The repository is evidence only of what the repository contains. Absence from the repository does not mean the experience did not happen; it is marked NEEDS_VERIFICATION or left as a controlled placeholder, never deleted and never guessed at.",
+    "identity": {
+      "name": "Bobbi Andrea",
+      "preferred_public_name": "Bobbi Andrea",
+      "positioning_supplied": "A multidisciplinary creative, technologist, Web3/community practitioner, songwriter and composer, music creator, radio/media contributor, graphic designer by professional background, and software/AI builder.",
+      "narrative_arc": "creative → design → radio/media → Web3/community → software/AI → current building, without implying the trajectory was linear",
+      "narrative_correction": "The story is not 'Bobbi used to do random things and now builds a trading bot.' It is a multidisciplinary trajectory in which the current software and AI direction, represented by SWICE, is the present chapter rather than a replacement for the earlier work. SWICE is the current flagship, not the entirety of the identity.",
+      "must_not": [
+        "reduce Bobbi Andrea to a single discipline",
+        "let the current software and AI work erase the earlier creative, design, radio, music and community work",
+        "frame him exclusively as a trader",
+        "frame him exclusively as a DJ",
+        "frame him exclusively as a graphic designer",
+        "frame him exclusively as a Web3 person",
+        "frame him exclusively as an AI developer",
+        "frame him exclusively as a community manager",
+        "describe him primarily as a content creator"
+      ],
+      "evidence": "USER_PROVIDED"
+    }
+  },
+  "_schema": {
+    "slug": "url-safe identifier",
+    "title": "exact display name; do not normalise spelling or capitalisation",
+    "type": "PROJECT | ROLE | EMPLOYMENT | CREATIVE_WORK | MEDIA | COMMUNITY | EXPERIMENT | RESEARCH | CURRENT_BUILD | ARCHIVED | THIRD_PARTY",
+    "status": "CURRENT | COMPLETED | EXPERIMENT | ROLE | CREATIVE | ARCHIVED | UNKNOWN",
+    "disciplines": "practice areas for the Practice section: creative | onchain-web3 | community-ecosystem | software-ai",
+    "index_filter": "single bucket for the work index: software-ai | web3-onchain | creative | community | media | experiments",
+    "categories": "fine-grained tags: graphic-design, music-art, radio-media, web3-onchain, community-ecosystem, events-education, software-ai, employment-roles",
+    "role": "Bobbi Andrea's role in his own words. null when not yet confirmed; never inferred from a job title or a project name.",
+    "summary": "publishable one-line description. null where nothing factual has been supplied.",
+    "timeframe": "start and end as YYYY or YYYY-MM; precision is exact | exact_years (year range confirmed, months not supplied) | exact_months (month range confirmed, days not supplied) | approx | unknown",
+    "links": "public URLs only, each with its own evidence level",
+    "media": "associated approved assets; pending where none exist",
+    "evidence": "VERIFIED_PUBLIC | USER_PROVIDED | INTERNAL_PROJECT_HISTORY | NEEDS_VERIFICATION | UNCERTAIN | EXCLUDED",
+    "visibility": "published | placeholder | draft | internal_only | excluded — nothing is 'published' yet",
+    "caseStudy": "path to a case study page, or null",
+    "must_not_claim": "claims explicitly forbidden for this entry",
+    "confirmation_required": "specific open questions; an empty array means nothing outstanding"
+  },
+  "_rules": [
+    "Evidence level describes the fact, not the artifact. A claim printed in this repository's dossier is INTERNAL_PROJECT_HISTORY: the publication is verifiable, the claim is not.",
+    "No entry may be published as established fact while its evidence is NEEDS_VERIFICATION or UNCERTAIN.",
+    "Any timeframe with precision 'approx' must render its qualifier visibly in copy. Unknown dates remain unknown; they are not upgraded to approximate.",
+    "Prefer 'unknown' over 'probably', and 'not publicly available' over 'coming soon', wherever that is more accurate.",
+    "Internal engineering milestones are not converted into public marketing claims.",
+    "Ecosystem participation is never written as ownership or founding.",
+    "Employment is never presented as a personal project. Experiments are never presented as launched products.",
+    "Third-party personal information is not recorded in this file, even where it currently appears on the published site.",
+    "Where information is incomplete, use a controlled placeholder. Do not fill gaps with plausible guesses."
+  ],
+
+  "work": [
+    {
+      "slug": "swice",
+      "title": "SWICE",
+      "type": "CURRENT_BUILD",
+      "status": "CURRENT",
+      "disciplines": ["software-ai"],
+      "index_filter": "software-ai",
+      "categories": ["software-ai", "web3-onchain"],
+      "role": null,
+      "summary": "A personal AI OS with a deterministic financial execution subsystem. In development.",
+      "positioning": {
+        "supplied": "SWICE is a personal AI OS. Trading is one of the things SWICE can do — a capability and a subsystem, not the identity of the project.",
+        "must_not_reduce_to": "a trading project",
+        "emphasis": [
+          "architecture",
+          "engineering practice",
+          "experimentation",
+          "deterministic execution",
+          "AI/software integration",
+          "system design",
+          "testing",
+          "failure handling"
+        ],
+        "de_emphasis": "financial performance claims of any kind",
+        "evidence": "USER_PROVIDED"
+      },
+      "timeframe": { "start": null, "end": null, "precision": "unknown", "note": "No start date supplied. Recorded as current and in development." },
+      "components": {
+        "_note": "Supplied as work that has been carried out. Some items are INTERNAL PROJECT HISTORY. Public disclosure of any individual item requires confirmation that it is appropriate to disclose, including whether internal architecture names may be published at all.",
+        "evidence": "INTERNAL_PROJECT_HISTORY",
+        "disclosure": "not_cleared",
+        "visibility": "excluded",
+        "items": [
+          "AI assistant functionality",
+          "voice interaction",
+          "Telegram",
+          "wearable/pendant integration",
+          "reasoning / intelligence layer",
+          "deterministic trading execution",
+          "Base ecosystem integration",
+          "price feeds",
+          "quote infrastructure",
+          "fallback mechanisms",
+          "paper trading",
+          "shadow mode",
+          "transaction simulation",
+          "failure / chaos testing",
+          "architecture governance",
+          "model gateway architecture",
+          "autonomous-agent concepts"
+        ]
+      },
+      "internal_progress": {
+        "_note": "Internal engineering progress exists and has been supplied privately. Because this file lives in a public repository, the specific values are deliberately NOT restated here — the same discipline applied to the removed private assets. A test-suite count and an internal phase label are engineering facts about a private codebase, not product achievements, and publishing either would invite readers to infer maturity that has not been claimed.",
+        "evidence": "INTERNAL_PROJECT_HISTORY",
+        "disclosure": "not_cleared",
+        "visibility": "excluded",
+        "withheld": [
+          "a test-suite pass count (figure withheld)",
+          "an internal phase label for the execution engine (label withheld)"
+        ],
+        "disclosable_areas": [
+          "paper trading",
+          "deterministic execution",
+          "quote and feed infrastructure",
+          "failure and chaos testing",
+          "transaction simulation"
+        ]
+      },
+      "internal_architecture_names": {
+        "_note": "At least one internal architecture component has a project name that has not been cleared for public disclosure. The name is deliberately not recorded in this file, because this repository is public and recording it here would publish it. It is held privately until Bobbi Andrea confirms whether it may be named. The same applies to any private infrastructure detail, credential, secret, private endpoint, wallet detail or API key.",
+        "evidence": "INTERNAL_PROJECT_HISTORY",
+        "disclosure": "not_cleared",
+        "visibility": "excluded"
+      },
+      "status_facts": {
+        "evidence": "USER_PROVIDED",
+        "items": [
+          "SWICE is in development.",
+          "It is not publicly available as a finished consumer product.",
+          "It is not production software.",
+          "It is not a live-money trading service.",
+          "Trading is currently associated with deterministic execution infrastructure, experimentation, testing, and paper-mode development.",
+          "Live trading has not been represented as launched."
+        ]
+      },
+      "links": [],
+      "media": { "status": "pending", "note": "No screenshots or demo material. Any asset must be checked for secrets before use." },
+      "evidence": "USER_PROVIDED",
+      "visibility": "published",
+      "caseStudy": "/work/swice/",
+      "must_not_claim": [
+        "live public product",
+        "production deployment",
+        "live trading",
+        "public adoption",
+        "users",
+        "revenue",
+        "funding",
+        "security certification",
+        "audited security",
+        "guaranteed trading performance",
+        "profitable trading",
+        "partnerships",
+        "public customers",
+        "real-money user activity",
+        "performance results presented as public product performance",
+        "that it is a commercially deployed autonomous financial product"
+      ],
+      "confirmation_required": [
+        "Whether the internal architecture component name held privately may be published",
+        "Which of the sixteen components above may be described publicly, and in how much detail",
+        "Start date, and whether development has been continuous",
+        "Whether any repository, demo or screenshot exists that contains no secrets",
+        "Final public status wording"
+      ],
+      "notes": "Flagship technical case study, and the marker of the transition into deeper software and AI engineering — a progression, not a replacement of the earlier creative, design, radio and Web3 history. No evidence exists anywhere in this repository; every fact is supplied. The framing correction matters: an earlier reading treated this as a trading project, and it is not. Trading is one subsystem of a personal AI OS. The case study should lead with architecture and engineering practice — paper trading, shadow mode, transaction simulation, chaos and failure testing, architecture governance — because that is what demonstrates the engineering without making any claim about money."
+    },
+    {
+      "slug": "bcsa",
+      "title": "Based Creators Southern Africa (BCSA)",
+      "type": "COMMUNITY",
+      "status": "COMPLETED",
+      "disciplines": ["community-ecosystem", "onchain-web3"],
+      "index_filter": "community",
+      "categories": ["community-ecosystem", "web3-onchain", "events-education"],
+      "role": "Regional President, Southern African Region",
+      "role_evidence": "USER_PROVIDED",
+      "role_context": "Confirmed by Bobbi Andrea as the authoritative official title, replacing the earlier generic wording 'leadership role'. Historical only: he is not its current president and it is not his current organisation. Use the full title; do not shorten it to 'President'.",
+      "role_title_caveat": "The title contains the words 'Southern African Region'. That is the title of the office, not a confirmed statement of where the chapter operated. It must not be converted into a geographic footprint claim, and it does not license publishing Malawi, South Africa, Lusaka, Livingstone or Johannesburg as BCSA footprint facts. See the geography block below, which is unchanged.",
+      "summary": "Completed community and ecosystem work in which Bobbi Andrea served as Regional President, Southern African Region.",
+      "timeframe": {
+        "start": "2025",
+        "end": "2026",
+        "precision": "exact_years",
+        "note": "The 2025–2026 period is confirmed by Bobbi Andrea. The specific months within it are not supplied, so years are used rather than months and must not be narrowed by inference; the dossier's own 'Oct 2025 — Chapter Founded' entry is INTERNAL_PROJECT_HISTORY and is not treated as the start date. Confirmed completed and no longer operating."
+      },
+      "work_described_by_user": [
+        "regional creator/community coordination",
+        "Southern African ecosystem activity",
+        "Base ecosystem community work",
+        "builder/community education",
+        "regional meetings",
+        "community calls",
+        "creator onboarding",
+        "ecosystem coordination",
+        "community activations",
+        "university onboarding"
+      ],
+      "geography": {
+        "_note": "These references come from different historical materials and conflict. No definitive geographic footprint may be invented where the evidence conflicts; only wording that can be supported may be used.",
+        "stated_by_user": ["Zambia", "wider Southern Africa", "Lusaka", "Livingstone", "Johannesburg"],
+        "stated_in_dossier": ["Zambia", "Malawi", "South Africa"],
+        "supportable_wording": "Zambia and Southern Africa. Only 'Zambia' is corroborated across both sources; every city and country beyond it appears in one source only.",
+        "evidence": "NEEDS_VERIFICATION"
+      },
+      "quarantined_claims": {
+        "_note": "Published in this repository's dossier and report. Not to be republished. A figure is omitted unless independently supported or explicitly confirmed; it does not become publishable merely by having appeared in the old dossier.",
+        "evidence": "INTERNAL_PROJECT_HISTORY",
+        "publish_decision": "omit unless explicitly confirmed",
+        "items": [
+          { "claim": "5 Active Squares", "in_repo_evidence": "none beyond the dossier's own copy" },
+          { "claim": "69 community members", "in_repo_evidence": "a single messaging-app admin screenshot" },
+          { "claim": "13 WhatsApp groups", "in_repo_evidence": "the same messaging-app admin screenshot" },
+          { "claim": "1.2K+ organic impressions on the first Farcaster community call", "in_repo_evidence": "an engagement count visible in a social-post screenshot" },
+          { "claim": "six members nominated for Base Builder Grants", "in_repo_evidence": "none" },
+          { "claim": "SongChain app funded and launched", "in_repo_evidence": "none; see the songchain entry" },
+          { "claim": "Chapter founded Oct 2025", "in_repo_evidence": "dossier timeline only" },
+          { "claim": "Livingstone Activation Jan 2026", "in_repo_evidence": "dossier timeline only" },
+          { "claim": "Base Batches 003, Mar 2026", "in_repo_evidence": "a countdown graphic in a social-post screenshot" }
+        ]
+      },
+      "roster_conflict": {
+        "_note": "The dossier published a five-seat leadership roster. An internal planning document among the removed image assets recorded a different and longer set of office-holders. The two do not agree. Conflicting third-party rosters are not to be published while unresolved, and unnecessary personal information about former team members is not to be exposed. No names are recorded in this file.",
+        "evidence": "UNCERTAIN",
+        "action_taken": "The roster block has been removed from the published page.",
+        "publish_decision": "do not publish until resolved and until each person's inclusion is approved"
+      },
+      "links": [
+        { "label": "BCSA Impact Dossier (this repository, deployed)", "url": "https://bcsa-impact-dossier.vercel.app", "evidence": "VERIFIED_PUBLIC" }
+      ],
+      "media": { "status": "consent_pending", "note": "Seven retained photographs show identifiable people and require permission. See excluded.json." },
+      "evidence": "USER_PROVIDED",
+      "visibility": "published",
+      "caseStudy": "/work/bcsa/",
+      "must_not_claim": [
+        "currently active",
+        "currently operating",
+        "currently recruiting",
+        "currently running programmes",
+        "Bobbi Andrea's current organisation",
+        "Bobbi Andrea as its current president",
+        "any quarantined figure above"
+      ],
+      "confirmation_required": [
+        "Exact start and end dates within the confirmed 2025-2026 period",
+        "Which specific events and activations took place, with dates",
+        "Whether any quarantined figure is independently supported and should be published",
+        "Whether the former team may be described without naming individuals",
+        "Lessons learned, in Bobbi's own words"
+      ],
+      "notes": "Deserves a full case study as a substantial completed chapter: what it was, his role, what he actually did, the ecosystem and community work, events and activations, lessons learned, evidence, and what it demonstrates about him. Past tense throughout. The existing dossier is source material, not the definition of the work, and almost all of its copy is present-tense and operational."
+    },
+    {
+      "slug": "bcsa-impact-dossier",
+      "title": "BCSA Impact Dossier",
+      "type": "PROJECT",
+      "status": "ARCHIVED",
+      "disciplines": ["software-ai", "creative"],
+      "index_filter": "software-ai",
+      "categories": ["software-ai", "graphic-design", "web3-onchain"],
+      "role": null,
+      "summary": null,
+      "timeframe": {
+        "start": "2026-05",
+        "end": "2026-05",
+        "precision": "exact",
+        "note": "Git history shows all ten commits of the original build dated 2026-05-13 to 2026-05-14."
+      },
+      "artifact_facts": {
+        "_note": "Directly verifiable from this repository, independent of any claim about BCSA itself.",
+        "evidence": "VERIFIED_PUBLIC",
+        "items": [
+          "Static site: semantic HTML, one 1557-line stylesheet, 370 lines of vanilla JavaScript, no build step and no dependencies",
+          "Three WebGL scenes using Three.js, including a hero renderer with a capability check and a text fallback",
+          "IntersectionObserver reveal system, animated counters, keyboard-navigable lightbox, guided question panel",
+          "Responsive design including a table-to-cards transformation at mobile widths",
+          "Deployed to Vercel; Netlify and Vercel configs with security headers present in the repository"
+        ]
+      },
+      "links": [
+        { "label": "Repository", "url": "https://github.com/bobbiandrea/BCSA-Impact-Dossier", "evidence": "VERIFIED_PUBLIC" },
+        { "label": "Deployment", "url": "https://bcsa-impact-dossier.vercel.app", "evidence": "VERIFIED_PUBLIC" }
+      ],
+      "media": { "status": "available", "note": "Screenshots of the site itself can be produced safely." },
+      "evidence": "VERIFIED_PUBLIC",
+      "visibility": "published",
+      "caseStudy": null,
+      "must_not_claim": [],
+      "confirmation_required": [
+        "Whether Bobbi designed and built this himself, with or without assistance, and how authorship should be described",
+        "Whether it should appear as a design and build project in its own right, as the container for the BCSA case study, or both"
+      ],
+      "notes": "The only entry whose artifact is fully verifiable, because it is this repository. Useful as evidence of design and front-end capability."
+    },
+    {
+      "slug": "crypto-4-nilubilo",
+      "title": "Crypto_4_Nilubilo",
+      "type": "PROJECT",
+      "status": "UNKNOWN",
+      "disciplines": ["onchain-web3", "community-ecosystem"],
+      "index_filter": "web3-onchain",
+      "categories": ["web3-onchain", "community-ecosystem"],
+      "role": null,
+      "summary": null,
+      "name_meaning": { "term": "Nilubilo", "meaning": "hope", "evidence": "USER_PROVIDED" },
+      "positioning_stated_by_user": ["restoring dignity / hope", "Zambia", "Web3 / Base"],
+      "timeframe": { "start": null, "end": null, "precision": "unknown" },
+      "links": [],
+      "media": { "status": "pending" },
+      "evidence": "USER_PROVIDED",
+      "visibility": "placeholder",
+      "caseStudy": null,
+      "must_not_claim": [
+        "exact structure",
+        "launch status",
+        "funding",
+        "users",
+        "outcomes",
+        "beneficiaries",
+        "amounts raised",
+        "impact metrics",
+        "partnerships"
+      ],
+      "confirmation_required": [
+        "What the initiative actually is and what it did",
+        "Whether it is active, completed or paused",
+        "Timeframe",
+        "Whether the underscores are intended in display use",
+        "Any public link, post or documentation"
+      ],
+      "notes": "A project or initiative associated with Bobbi Andrea. Positioning is known; structure, status and outcomes are not, and are explicitly not to be inferred. Holds a Selected Work slot pending a verified description."
+    },
+    {
+      "slug": "base-zambia",
+      "title": "Base Zambia",
+      "type": "ROLE",
+      "status": "CURRENT",
+      "disciplines": ["community-ecosystem", "onchain-web3"],
+      "index_filter": "community",
+      "categories": ["community-ecosystem", "web3-onchain", "events-education"],
+      "role": "Volunteer / moderator",
+      "role_evidence": "USER_PROVIDED",
+      "summary": "Volunteer and moderator for the Base Zambia community.",
+      "timeframe": { "start": null, "end": null, "precision": "unknown", "note": "Undated but current. No start date was supplied and none may be invented, so this renders without dates rather than with a guessed period." },
+      "links": [],
+      "media": { "status": "pending" },
+      "evidence": "USER_PROVIDED",
+      "visibility": "published",
+      "caseStudy": null,
+      "must_not_claim": [
+        "founder",
+        "executive",
+        "employee",
+        "owner",
+        "official Base employee",
+        "any leadership position beyond volunteer / moderator",
+        "ownership of Base",
+        "official Base affiliation",
+        "a project founded by Bobbi Andrea"
+      ],
+      "confirmation_required": [
+        "Timeframe, if Bobbi wishes one shown",
+        "Whether the community may be linked from the portfolio"
+      ],
+      "notes": "A community role and relationship, not a project and not ownership of Base. Recorded as current and undated. Belongs primarily in trajectory as role and community experience. Two things must not be conflated with it: BCSA, which is a separate chapter; and the dossier's listing of a Base Zambia account inside a BCSA leadership grid, which is a claim about that account's role within BCSA rather than about Bobbi's relationship to Base Zambia."
+    },
+    {
+      "slug": "base-agent-app-experiment",
+      "title": "Base AI agent and app experimentation",
+      "type": "EXPERIMENT",
+      "status": "EXPERIMENT",
+      "disciplines": ["software-ai", "onchain-web3"],
+      "index_filter": "experiments",
+      "categories": ["software-ai", "web3-onchain"],
+      "role": null,
+      "summary": "Experimentation with AI agents and applications in the Base ecosystem.",
+      "timeframe": { "start": null, "end": null, "precision": "unknown" },
+      "relationship_to_swice": {
+        "status": "unresolved",
+        "note": "May be related to the evolution of SWICE or may be a distinct experiment. Not to be merged into SWICE unless the relationship is established. Represented as experimentation while unresolved.",
+        "evidence": "UNCERTAIN"
+      },
+      "links": [],
+      "media": { "status": "pending" },
+      "evidence": "USER_PROVIDED",
+      "visibility": "published",
+      "caseStudy": null,
+      "must_not_claim": ["product name", "users", "technical capabilities", "launch status", "a formal product or company"],
+      "confirmation_required": [
+        "Whether it is distinct from SWICE or an earlier stage of it",
+        "What was actually built and how far it got",
+        "Whether it has a name that may be published",
+        "Any public post or thread to link"
+      ],
+      "notes": "Recorded as experimentation, not a product or company."
+    },
+    {
+      "slug": "landeni",
+      "title": "LANDENI",
+      "type": "EXPERIMENT",
+      "status": "UNKNOWN",
+      "disciplines": ["software-ai"],
+      "index_filter": "experiments",
+      "categories": ["software-ai"],
+      "role": null,
+      "summary": "A chat-app concept.",
+      "timeframe": { "start": null, "end": null, "precision": "unknown" },
+      "links": [],
+      "media": { "status": "pending" },
+      "evidence": "USER_PROVIDED",
+      "visibility": "published",
+      "caseStudy": null,
+      "must_not_claim": ["implementation", "launch status", "users", "feature set"],
+      "confirmation_required": [
+        "Whether anything was implemented, and how far it got",
+        "Status and timeframe",
+        "Whether the concept can be described publicly in more detail",
+        "Any link or asset"
+      ],
+      "notes": "A chat-app concept. Recorded as a concept, which is not the same as an application; implementation and launch status must not be inferred."
+    },
+    {
+      "slug": "jams",
+      "title": "JAMS",
+      "type": "EXPERIMENT",
+      "status": "UNKNOWN",
+      "disciplines": ["onchain-web3", "creative"],
+      "index_filter": "experiments",
+      "categories": ["web3-onchain", "music-art", "software-ai"],
+      "role": null,
+      "summary": "A Web3 music platform and miniapp project.",
+      "timeframe": { "start": null, "end": null, "precision": "unknown" },
+      "links": [],
+      "media": { "status": "pending" },
+      "evidence": "USER_PROVIDED",
+      "visibility": "published",
+      "caseStudy": null,
+      "must_not_claim": ["launch status", "users", "adoption", "feature set"],
+      "confirmation_required": [
+        "What it does, and how far it got",
+        "Whether it is live, prototyped or a concept",
+        "Timeframe",
+        "Any link or asset"
+      ],
+      "notes": "A Web3 music platform / miniapp project. Both halves of that description are supplied; nothing further about features, launch or adoption may be added."
+    },
+    {
+      "slug": "on-base-rhythms",
+      "title": "On Base Rhythms",
+      "type": "CREATIVE_WORK",
+      "type_note": "Classified as creative work. It is grouped inside the compact Experiments card on the homepage for visual weighting; the grouping is a presentation decision and does not change the type.",
+      "status": "COMPLETED",
+      "status_note": "The direction later changed after the death of DJ Swice Adonis, who was the CEO. Recorded as Bobbi Andrea stated it, with no speculation about the death or its circumstances, and no inference about what happened to the project afterwards.",
+      "disciplines": ["creative", "onchain-web3"],
+      "index_filter": "creative",
+      "categories": ["music-art", "web3-onchain"],
+      "role": null,
+      "role_note": "No formal title is claimed. The involvement below is the confirmed extent of it.",
+      "summary": "Artist outreach, music curation and marketing for On Base Rhythms.",
+      "involvement": {
+        "_note": "Confirmed by Bobbi Andrea. This list is the whole of the claim; nothing may be added to it or generalised from it.",
+        "evidence": "USER_PROVIDED",
+        "items": [
+          "helping market the idea",
+          "helping manage the idea",
+          "helping sell and pitch the idea",
+          "connecting with different types of upcoming artists",
+          "organising new-school and upcoming artists' music by genre for radio plays",
+          "organising artists' music for social-media marketing",
+          "helping develop connections with the upcoming-artist community"
+        ]
+      },
+      "timeframe": { "start": null, "end": null, "precision": "unknown" },
+      "links": [],
+      "media": { "status": "pending" },
+      "evidence": "USER_PROVIDED",
+      "visibility": "published",
+      "caseStudy": null,
+      "must_not_claim": [
+        "that Bobbi Andrea founded On Base Rhythms",
+        "that he owned it",
+        "that he was its CEO",
+        "that he was its sole manager",
+        "that he created the entire movement",
+        "that he personally represented every artist",
+        "any formal executive title",
+        "audience or reach figures",
+        "anything about the circumstances of DJ Swice Adonis's death"
+      ],
+      "confirmation_required": [
+        "Timeframe",
+        "Any link or asset",
+        "Whether the project continued in any form after the change of direction"
+      ],
+      "notes": "A distinct creative-work entry, kept in the portfolio despite being historical and despite the change of direction. The involvement list is the confirmed scope and is not to be expanded. DJ Swice Adonis is named only as the CEO whose death preceded the change of direction, in Bobbi Andrea's own framing."
+    },
+    {
+      "slug": "new-school-rhythmz-443",
+      "title": "New School Rhythmz 443",
+      "type": "CREATIVE_WORK",
+      "status": "CURRENT",
+      "disciplines": ["creative", "onchain-web3"],
+      "index_filter": "creative",
+      "categories": ["music-art", "web3-onchain"],
+      "role": null,
+      "summary": "An in-development game and project intended as a continuation of the New School Rhythms movement, exploring ways to bring artists onchain. Also described as a live onchain music event.",
+      "timeframe": { "start": null, "end": null, "precision": "unknown", "note": "Still being worked on. No dates supplied and none may be invented." },
+      "canonical_name": {
+        "_note": "The canonical name is 'New School Rhythmz 443', the more specific identity. It was previously recorded as two separate entries, 'New School Rhythmz' and 'New School Rhythmz 443'; that split was incorrect and has been merged. There is exactly one entry for this project.",
+        "superseded_names": ["New School Rhythmz"],
+        "evidence": "USER_PROVIDED"
+      },
+      "described_as": {
+        "_note": "Both descriptions come from Bobbi Andrea and are held together without inventing a link between them. No technical, chronological or causal relationship between the game and the live event may be asserted, because none has been supplied.",
+        "evidence": "USER_PROVIDED",
+        "items": [
+          "an in-development game and project continuing the New School Rhythms movement",
+          "a purpose that includes exploring ways to bring artists onchain",
+          "a live onchain music event"
+        ]
+      },
+      "name_distinction": {
+        "_note": "RESOLVED. New School Rhythmz 443, with a z, is this project. New School Rhythms, with an s, is a separate radio show and movement at which Bobbi Andrea was Managing Director, recorded in trajectory.json. Those two remain different things and must never be merged, and 'Rhythmz' must never be normalised to 'Rhythms'.",
+        "evidence": "USER_PROVIDED",
+        "status": "resolved"
+      },
+      "links": [],
+      "media": { "status": "pending" },
+      "evidence": "USER_PROVIDED",
+      "visibility": "published",
+      "caseStudy": null,
+      "must_not_claim": [
+        "that the game is finished",
+        "that it has launched",
+        "that it has users",
+        "revenue",
+        "adoption figures",
+        "funding",
+        "partnerships",
+        "commercial deployment",
+        "artist onboarding numbers",
+        "any specific technical relationship between the live event and the game",
+        "that it is the same entity as New School Rhythms"
+      ],
+      "confirmation_required": [
+        "Stage of development, and whether any build may be shown",
+        "Timeframe",
+        "How the live onchain music event and the game relate, if at all",
+        "Any link or asset"
+      ],
+      "notes": "One project, one entry. Previously and incorrectly split into a game entry and a separate event entry; merged here under the canonical name. Both of Bobbi Andrea's descriptions are preserved — an in-development game continuing the movement, and a live onchain music event — without asserting how they connect."
+    },
+    {
+      "slug": "black-circle",
+      "title": "Black Circle",
+      "type": "CREATIVE_WORK",
+      "status": "UNKNOWN",
+      "disciplines": ["creative"],
+      "index_filter": "creative",
+      "categories": ["music-art"],
+      "role": null,
+      "summary": "A music and creative project associated with Bobbi Andrea.",
+      "timeframe": { "start": null, "end": null, "precision": "unknown" },
+      "links": [],
+      "media": { "status": "pending" },
+      "evidence": "USER_PROVIDED",
+      "visibility": "published",
+      "caseStudy": null,
+      "must_not_claim": [
+        "that it is a record label",
+        "that it is a band",
+        "that it is a collective",
+        "that it is a company",
+        "corporate or legal structure of any kind",
+        "the nature of the relationship between Bobbi Andrea and Black Circle beyond what is confirmed",
+        "release counts or statistics"
+      ],
+      "confirmation_required": [
+        "How the relationship should be described: alias, group, duo, band, label or collaboration",
+        "Whether other people are involved and may be named",
+        "Release links",
+        "Active period"
+      ],
+      "notes": "Named as part of Bobbi Andrea's music history. Structure and relationship are explicitly out of bounds until confirmed."
+    },
+    {
+      "slug": "bobbi-andrea-music",
+      "title": "Bobbi Andrea — music",
+      "type": "CREATIVE_WORK",
+      "status": "CREATIVE",
+      "disciplines": ["creative"],
+      "index_filter": "creative",
+      "categories": ["music-art"],
+      "role": "Songwriter, music composer and artist; also music producer and DJ",
+      "role_evidence": "USER_PROVIDED",
+      "summary": "Bobbi Andrea's artist identity: songwriting and composition, music creation and production, DJ work, and Web3 music experimentation.",
+      "identity_rule": "Bobbi Andrea is the artist identity. Do not create a false distinction between Bobbi Andrea the person and the music work; this entry exists to hold the creative output, not to separate it from him.",
+      "timeframe": {
+        "start": "2017",
+        "end": null,
+        "precision": "approx",
+        "note": "Public music activity indicated as going back to approximately 2017. Not independently confirmed, so it may only be used as an approximate historical marker and must never be stated as an exact verified start date. Music activity predates the current software and AI focus."
+      },
+      "links": [],
+      "media": { "status": "pending", "note": "No audio, artwork or release imagery exists in this repository. Links must be supplied; they must not be constructed." },
+      "evidence": "USER_PROVIDED",
+      "visibility": "published",
+      "caseStudy": null,
+      "must_not_claim": [
+        "discography statistics",
+        "streams",
+        "chart positions",
+        "release counts",
+        "fabricated releases",
+        "manufactured links"
+      ],
+      "confirmation_required": [
+        "Music platform links and selected releases",
+        "Which releases to feature, and whether under Bobbi Andrea, Black Circle or both",
+        "Whether production credits for other artists should be represented",
+        "Genre or scene framing, in Bobbi's own words"
+      ],
+      "notes": "A legitimate part of the professional and creative trajectory, not a past hobby, and the primary framing is songwriter and composer rather than DJ or content creator. Currently the least documented area in the repository despite being among the longest-running: there is not one audio link or release image anywhere in the assets. Music stays in the portfolio regardless; the links are marked pending."
+    },
+    {
+      "slug": "graphic-design-work",
+      "title": "Graphic design work",
+      "type": "CREATIVE_WORK",
+      "status": "CREATIVE",
+      "disciplines": ["creative"],
+      "index_filter": "creative",
+      "categories": ["graphic-design"],
+      "role": "Graphic Designer",
+      "summary": null,
+      "timeframe": {
+        "start": "2021",
+        "end": "2023",
+        "precision": "approx",
+        "note": "Bracketed by the three confirmed design employments, January 2021 to June 2023. Whether design work predates or postdates that employment is not established."
+      },
+      "employment_ref": ["dinda-signs-solutions", "master-signs-printers", "index-printers-zambia"],
+      "links": [],
+      "media": { "status": "pending", "note": "No design assets of sufficient quality exist in this repository. Poor-quality screenshots must not be presented as professional design work." },
+      "evidence": "USER_PROVIDED",
+      "visibility": "published",
+      "caseStudy": null,
+      "must_not_claim": ["fabricated design examples", "clients", "achievements", "metrics"],
+      "confirmation_required": [
+        "Portfolio assets: design files or exports at real resolution",
+        "Which pieces may be published, given that signage and print work is usually client work",
+        "Whether client names may be mentioned",
+        "Whether any BCSA or music artwork was designed by Bobbi and may be shown as his own"
+      ],
+      "notes": "Distinct from the three employment records in trajectory.json, which record where he worked; this entry covers the visual output. Until assets are supplied the design career is represented textually through the trajectory, with no fabricated portfolio pieces. Important to the narrative because it explains the visual foundation behind the later Web3, music and software work."
+    },
+    {
+      "slug": "dc-radio-blockchain-ai-show",
+      "title": "EthZambezi Blockchain & AI Show — DC Radio",
+      "type": "MEDIA",
+      "status": "COMPLETED",
+      "disciplines": ["creative", "onchain-web3"],
+      "index_filter": "media",
+      "categories": ["radio-media", "web3-onchain", "software-ai"],
+      "role": "One of the hosts",
+      "role_evidence": "USER_PROVIDED",
+      "summary": "One of the hosts of the EthZambezi Blockchain & AI Show on DC Radio, April–May 2024.",
+      "title_confirmed": {
+        "_note": "The show title is confirmed as 'EthZambezi Blockchain & AI Show'. The earlier neutral formulation 'Blockchain & AI radio show — DC Radio' and the shorter 'Blockchain & AI Show' variant are superseded and must not be reintroduced as alternatives.",
+        "evidence": "USER_PROVIDED"
+      },
+      "timeframe": {
+        "start": "2024-04",
+        "end": "2024-05",
+        "precision": "exact_months",
+        "note": "April–May 2024, confirmed. Exact days are not supplied and must not be invented, and the period must not be extended beyond April–May 2024. An earlier description gave the duration as approximately one month; the confirmed period is the wording to publish."
+      },
+      "links": [],
+      "media": { "status": "pending" },
+      "evidence": "USER_PROVIDED",
+      "visibility": "published",
+      "caseStudy": null,
+      "must_not_claim": [
+        "sole host",
+        "creator of the show",
+        "owner of the show",
+        "ownership of DC Radio or the radio station",
+        "the title Founder",
+        "the title Executive Producer",
+        "that it is a personal company or project",
+        "an exact day within the period",
+        "any period beyond April–May 2024",
+        "audience figures",
+        "episode counts"
+      ],
+      "confirmation_required": [
+        "Station URL and correct station wording",
+        "Any episode links, recordings or promotional material",
+        "Names of co-hosts, and whether they may be credited"
+      ],
+      "notes": "The media experience to represent, replacing an incorrect earlier attribution recorded in excluded.json. Title, role and period are now confirmed: one of the hosts, not the sole host, and not the creator or owner. Important to the narrative because it connects the earlier radio and media background with the later blockchain and AI work."
+    },
+    {
+      "slug": "web3-artist-onboarding",
+      "title": "Web3 music and artist onboarding",
+      "type": "COMMUNITY",
+      "status": "UNKNOWN",
+      "disciplines": ["community-ecosystem", "creative"],
+      "index_filter": "community",
+      "categories": ["web3-onchain", "music-art", "events-education"],
+      "role": null,
+      "summary": null,
+      "timeframe": { "start": null, "end": null, "precision": "unknown" },
+      "links": [],
+      "media": { "status": "pending" },
+      "evidence": "USER_PROVIDED",
+      "visibility": "internal_only",
+      "caseStudy": null,
+      "must_not_claim": ["numbers of artists onboarded", "outcomes"],
+      "confirmation_required": [
+        "Whether this is a distinct body of work or a facet of BCSA, Base Zambia and the music projects",
+        "What onboarding actually involved",
+        "Whether specific artists may be named"
+      ],
+      "notes": "Held as internal_only because it may be a theme running through other entries rather than a separate item."
+    },
+    {
+      "slug": "ecosystem-participation",
+      "title": "Web3 ecosystem participation",
+      "type": "RESEARCH",
+      "status": "UNKNOWN",
+      "disciplines": ["onchain-web3"],
+      "index_filter": "web3-onchain",
+      "categories": ["web3-onchain"],
+      "role": null,
+      "summary": null,
+      "ecosystems": {
+        "named_by_user": ["Base", "Coinbase", "Coinbase Wallet", "Zora", "Farcaster", "Ethereum", "other ecosystem and community initiatives"],
+        "evidence": "USER_PROVIDED"
+      },
+      "timeframe": { "start": null, "end": null, "precision": "unknown" },
+      "links": [],
+      "media": { "status": "pending" },
+      "evidence": "USER_PROVIDED",
+      "visibility": "published",
+      "caseStudy": null,
+      "must_not_claim": [
+        "employment by any of these organisations",
+        "official affiliation",
+        "partnership",
+        "founding or ownership",
+        "grants"
+      ],
+      "confirmation_required": [
+        "What was actually built, minted, published or explored on each platform",
+        "Whether public artifacts exist to link",
+        "Correct role language for each ecosystem"
+      ],
+      "notes": "Participation across ecosystems, never ownership. Base may be mentioned factually where relevant. This repository currently leans toward implied affiliation through its use of Base's exact brand blue and a 'BUILT ON BASE' badge; both are to be corrected in the design phase."
+    },
+    {
+      "slug": "community-activations-education",
+      "title": "Community activations, university onboarding and education",
+      "type": "COMMUNITY",
+      "status": "UNKNOWN",
+      "disciplines": ["community-ecosystem"],
+      "index_filter": "community",
+      "categories": ["events-education", "community-ecosystem"],
+      "role": null,
+      "summary": null,
+      "timeframe": { "start": null, "end": null, "precision": "unknown" },
+      "links": [],
+      "media": { "status": "consent_pending" },
+      "evidence": "USER_PROVIDED",
+      "visibility": "internal_only",
+      "caseStudy": null,
+      "must_not_claim": ["attendance figures", "numbers of institutions", "reach", "impact metrics"],
+      "confirmation_required": [
+        "Whether these were carried out under BCSA, Base Zambia, independently, or a combination",
+        "Which specific events and activations took place, with dates and locations",
+        "Which institutions, and whether they may be named",
+        "Whether any photography exists that may be published"
+      ],
+      "notes": "The dossier describes several programmes by name in present tense and without dates; those descriptions are INTERNAL_PROJECT_HISTORY and cannot be carried over as fact. It also lists an expansion pipeline of named prospective institutions, which was future-facing and must not be presented as achieved."
+    },
+    {
+      "slug": "songchain",
+      "title": "SongChain",
+      "type": "THIRD_PARTY",
+      "status": "UNKNOWN",
+      "disciplines": [],
+      "index_filter": null,
+      "categories": ["web3-onchain", "music-art"],
+      "role": null,
+      "summary": null,
+      "timeframe": { "start": null, "end": null, "precision": "unknown" },
+      "links": [],
+      "media": { "status": "none" },
+      "evidence": "NEEDS_VERIFICATION",
+      "visibility": "internal_only",
+      "caseStudy": null,
+      "must_not_claim": [
+        "that Bobbi built it",
+        "that Bobbi owns it",
+        "that it launched",
+        "that it was funded",
+        "a place in Bobbi Andrea's portfolio as his own project"
+      ],
+      "confirmation_required": [
+        "Whether Bobbi had any direct involvement, and if so exactly what",
+        "Whether it exists publicly and may be linked",
+        "Whether it should appear in the BCSA case study at all"
+      ],
+      "notes": "Referenced four times in this repository as an onchain music application associated with a Livingstone chapter and described as 'funded and launched'. The dossier's own wording credits Bobbi with 'facilitating the environment' rather than building it. A mention in the old BCSA material is not sufficient to establish ownership. Recorded as third-party so it can never be absorbed by accident."
+    }
+  ]
+}
